@@ -28,6 +28,10 @@ La tâche GitHub `.github/workflows/site.yml` fait tout :
 
 Aucun mot de passe n'est nécessaire.
 
+**Maquette non indexée** : la page contient une balise `<meta name="robots" content="noindex…">`
+pour que les moteurs de recherche ne la référencent pas. À retirer de `site/index.html`
+quand le site devient officiel.
+
 ## Ce qui est automatique, et ce qui reste à compléter
 
 | Automatique (ffhandball.fr) | À compléter dans `site/index.html`, bloc `CLUB` |
