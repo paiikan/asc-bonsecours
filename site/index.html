@@ -1,0 +1,933 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ASC Bonsecours Handball</title>
+<meta name="description" content="ASC Bonsecours Handball : matchs, résultats et classements de toutes les équipes, mis à jour automatiquement depuis ffhandball.fr. Inscriptions et contact.">
+<link rel="icon" href="https://media-logos-clubs.ffhandball.fr/64/2024-08-21-58a11b0c-1d13-4285-a9f6-899cae5a14e2.webp">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,600;0,700;0,800;1,800&family=Barlow:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+/* =========================================================
+   THÈME — couleurs du club (noir & jaune du blason)
+   ========================================================= */
+:root{
+  --ink:#121212; --ink-2:#1f1f1f; --ink-3:#2a2a2a;
+  --gold:#f6bd16; --gold-dark:#d9a200; --gold-soft:#fff4cc;
+  --paper:#f7f5f0; --card:#fff; --line:#e6e1d6; --muted:#5f5f5f;
+  --win:#1f9d55; --draw:#c48a00; --loss:#c62f22;
+  --radius:14px; --shadow:0 1px 2px rgba(0,0,0,.05),0 8px 24px rgba(0,0,0,.07);
+  --display:"Barlow Condensed",system-ui,sans-serif;
+  --body:"Barlow",system-ui,-apple-system,"Segoe UI",sans-serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:var(--body);color:var(--ink);background:var(--paper);line-height:1.55;font-size:17px;-webkit-font-smoothing:antialiased}
+img,svg{display:block;max-width:100%}
+a{color:inherit}
+button{font:inherit;cursor:pointer}
+.wrap{width:min(1180px,100% - 40px);margin-inline:auto}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}
+:focus-visible{outline:3px solid var(--gold);outline-offset:2px;border-radius:4px}
+h1,h2,h3{font-family:var(--display);text-transform:uppercase;letter-spacing:.01em;line-height:.95}
+h2{font-size:clamp(2.2rem,4.5vw,3.4rem);font-weight:800}
+h3{font-size:1.45rem;font-weight:700}
+.kicker{font-family:var(--display);font-weight:700;text-transform:uppercase;letter-spacing:.14em;font-size:.9rem;color:var(--gold-dark);display:flex;align-items:center;gap:10px;margin-bottom:12px}
+.kicker::before{content:"";width:28px;height:3px;background:currentColor;border-radius:2px}
+.lead{color:var(--muted);max-width:62ch;margin-top:14px}
+section{padding:92px 0;scroll-margin-top:70px}
+.sec-head{display:flex;justify-content:space-between;align-items:flex-end;gap:24px;flex-wrap:wrap;margin-bottom:36px}
+.src{font-size:.82rem;color:var(--muted);margin-top:14px}
+.src a{color:inherit}
+
+.btn{display:inline-flex;align-items:center;gap:8px;padding:13px 22px;border-radius:999px;border:2px solid transparent;font-weight:700;text-decoration:none;font-size:.98rem;transition:transform .15s,background .15s}
+.btn:hover{transform:translateY(-1px)}
+.btn-gold{background:var(--gold);color:var(--ink)}
+.btn-gold:hover{background:var(--gold-dark)}
+.btn-ghost{border-color:currentColor;background:transparent}
+.btn-ghost:hover{background:rgba(255,255,255,.08)}
+.btn-dark{background:var(--ink);color:#fff}
+.btn-sm{padding:8px 14px;font-size:.88rem}
+
+/* ---------- Header ---------- */
+header.top{position:sticky;top:0;z-index:50;background:rgba(18,18,18,.96);backdrop-filter:blur(8px);color:#fff;border-bottom:3px solid var(--gold)}
+.top .wrap{display:flex;align-items:center;justify-content:space-between;height:68px;gap:20px}
+.brand{display:flex;align-items:center;gap:12px;text-decoration:none}
+.brand .logo{width:46px;height:46px;border-radius:50%;background:var(--gold);display:grid;place-items:center;overflow:hidden;flex:none}
+.brand .logo img{width:100%;height:100%;object-fit:cover}
+.brand b{font-family:var(--display);font-size:1.35rem;font-weight:800;text-transform:uppercase;line-height:1;display:block}
+.brand small{font-size:.72rem;opacity:.65;letter-spacing:.08em;text-transform:uppercase}
+nav.main ul{display:flex;list-style:none;gap:4px}
+nav.main a{text-decoration:none;font-weight:600;font-size:.95rem;padding:8px 12px;border-radius:8px;opacity:.85}
+nav.main a:hover,nav.main a.active{opacity:1;background:rgba(255,255,255,.08)}
+nav.main a.active{color:var(--gold)}
+.burger{display:none;background:none;border:0;width:44px;height:44px}
+.burger span{display:block;width:22px;height:2px;background:#fff;margin:5px auto}
+@media (max-width:980px){
+  .burger{display:block}
+  nav.main{position:fixed;inset:71px 0 auto 0;background:var(--ink);padding:12px 20px 24px;transform:translateY(-130%);transition:transform .25s;border-bottom:3px solid var(--gold)}
+  nav.main.open{transform:none}
+  nav.main ul{flex-direction:column}
+  nav.main a{display:block;padding:12px;font-size:1.05rem}
+  .top .cta-head{display:none}
+}
+
+/* ---------- Hero ---------- */
+.hero{background:var(--ink);color:#fff;position:relative;overflow:hidden;padding:72px 0 0}
+.hero .court{position:absolute;right:-120px;top:-40px;width:760px;opacity:.12;pointer-events:none}
+.hero-grid{display:grid;grid-template-columns:1.25fr .9fr;gap:48px;align-items:center;position:relative}
+.hero h1{font-size:clamp(3.2rem,8vw,6.2rem);font-weight:800;font-style:italic}
+.hero h1 em{color:var(--gold);font-style:italic}
+.hero p.sub{font-size:1.15rem;opacity:.82;max-width:52ch;margin:22px 0 30px}
+.hero .actions{display:flex;gap:12px;flex-wrap:wrap}
+.next{background:#fff;color:var(--ink);border-radius:20px;padding:26px;box-shadow:0 30px 60px rgba(0,0,0,.4);position:relative}
+.next::before{content:"";position:absolute;inset:-7px -7px auto auto;width:74px;height:74px;background:var(--gold);border-radius:16px;z-index:-1;transform:rotate(8deg)}
+.tag{display:inline-block;background:var(--ink);color:var(--gold);font-family:var(--display);font-weight:700;text-transform:uppercase;letter-spacing:.1em;font-size:.8rem;padding:5px 10px;border-radius:6px}
+.next .comp{color:var(--muted);font-size:.9rem;margin-top:10px}
+.versus{display:grid;grid-template-columns:1fr auto 1fr;align-items:center;gap:10px;margin:18px 0}
+.versus .team{text-align:center;font-family:var(--display);font-weight:700;text-transform:uppercase;font-size:1.1rem;line-height:1.05}
+.versus .vs{font-family:var(--display);font-weight:800;font-size:1.6rem;color:var(--gold-dark)}
+.crest{width:58px;height:58px;margin:0 auto 8px;border-radius:50%;display:grid;place-items:center;font-family:var(--display);font-weight:800;font-size:1.15rem;color:#fff;overflow:hidden;background:#555}
+.crest img{width:100%;height:100%;object-fit:contain;background:#fff}
+.countdown{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin:6px 0 16px}
+.countdown div{background:var(--paper);border-radius:10px;text-align:center;padding:10px 4px}
+.countdown b{font-family:var(--display);font-size:2rem;font-weight:800;display:block;line-height:1}
+.countdown span{font-size:.72rem;text-transform:uppercase;letter-spacing:.08em;color:var(--muted)}
+.next .where{font-size:.92rem;color:var(--muted);display:flex;gap:8px;align-items:flex-start}
+.next .where svg{flex:none;margin-top:3px}
+.stats{display:grid;grid-template-columns:repeat(4,1fr);margin-top:72px;border-top:1px solid rgba(255,255,255,.12)}
+.stats div{padding:26px 10px;border-right:1px solid rgba(255,255,255,.12)}
+.stats div:last-child{border-right:0}
+.stats b{font-family:var(--display);font-size:clamp(2.2rem,4vw,3.2rem);font-weight:800;display:block;line-height:1;color:var(--gold)}
+.stats span{opacity:.7;font-size:.92rem}
+@media (max-width:900px){.hero-grid{grid-template-columns:1fr}.stats{grid-template-columns:repeat(2,1fr)}.stats div:nth-child(2){border-right:0}.stats div:nth-child(-n+2){border-bottom:1px solid rgba(255,255,255,.12)}}
+
+.ticker{background:var(--gold);color:var(--ink);overflow:hidden;white-space:nowrap;font-family:var(--display);font-weight:700;text-transform:uppercase;letter-spacing:.05em}
+.ticker .track{display:inline-flex;gap:48px;padding:12px 0;animation:tick 50s linear infinite}
+.ticker .track span::after{content:"●";margin-left:48px;opacity:.4}
+@keyframes tick{to{transform:translateX(-50%)}}
+@media (prefers-reduced-motion:reduce){.ticker .track{animation:none}html{scroll-behavior:auto}}
+
+.card{background:var(--card);border-radius:var(--radius);box-shadow:var(--shadow);border:1px solid var(--line)}
+.chips{display:flex;gap:8px;flex-wrap:wrap}
+.chip{border:1.5px solid var(--line);background:var(--card);padding:8px 14px;border-radius:999px;font-weight:600;font-size:.9rem;color:var(--ink)}
+.chip:hover{border-color:var(--ink)}
+.chip[aria-pressed="true"]{background:var(--ink);color:var(--gold);border-color:var(--ink)}
+.empty{padding:30px;text-align:center;color:var(--muted)}
+
+/* ---------- Le week-end (actus auto) ---------- */
+.news-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.news{overflow:hidden;display:flex;flex-direction:column;text-decoration:none}
+.news .band{padding:18px 22px;display:flex;align-items:center;gap:14px;color:#fff;background:var(--ink)}
+.news .band.V{background:var(--ink)} .news .band.D{background:#3a3a3a} .news .band.N{background:#2c2c2c}
+.news .band .res{flex:none}
+.news .band .score{font-family:var(--display);font-weight:800;font-size:2.4rem;line-height:1;color:var(--gold)}
+.news .band small{display:block;font-size:.78rem;opacity:.7;text-transform:uppercase;letter-spacing:.06em}
+.news .body{padding:18px 22px 22px;display:flex;flex-direction:column;gap:6px;flex:1}
+.news time{font-size:.85rem;color:var(--muted);text-transform:capitalize}
+.news h3{font-size:1.3rem}
+.news p{color:var(--muted);font-size:.93rem}
+@media (max-width:980px){.news-grid{grid-template-columns:1fr 1fr}}
+@media (max-width:640px){.news-grid{grid-template-columns:1fr}}
+
+/* ---------- Matchs ---------- */
+.matches-bar{display:flex;gap:14px;justify-content:space-between;flex-wrap:wrap;margin-bottom:22px}
+.seg{display:inline-flex;background:#e9e5da;border-radius:999px;padding:4px;flex-wrap:wrap}
+.seg button{border:0;background:transparent;padding:9px 18px;border-radius:999px;font-weight:700;color:var(--muted)}
+.seg button[aria-selected="true"]{background:var(--ink);color:var(--gold)}
+select{font:inherit;padding:10px 14px;border-radius:10px;border:1.5px solid var(--line);background:var(--card);color:var(--ink);font-weight:600}
+.match-list{display:flex;flex-direction:column;gap:12px}
+.match{display:grid;grid-template-columns:100px 44px 1fr auto;gap:18px;align-items:center;padding:16px 22px;text-decoration:none}
+.match:hover{border-color:#cfc8b8}
+.match .date{font-family:var(--display);text-transform:uppercase;line-height:1}
+.match .date b{font-size:2rem;font-weight:800;display:block}
+.match .date span{font-size:.85rem;color:var(--muted);font-weight:700}
+.match .crest{width:44px;height:44px;margin:0;font-size:.9rem}
+.match .info small{display:block;color:var(--muted);font-size:.82rem;font-weight:600;text-transform:uppercase;letter-spacing:.04em}
+.match .info .teams{font-weight:700;font-size:1.05rem;margin-top:3px}
+.match .info .teams .us{color:var(--gold-dark)}
+.badge{font-family:var(--display);font-weight:700;font-size:.76rem;padding:3px 8px;border-radius:5px;text-transform:uppercase;letter-spacing:.06em;margin-right:6px;vertical-align:2px}
+.b-dom{background:var(--gold);color:var(--ink)}.b-ext{background:#ebe7dc;color:var(--ink)}
+.score{font-family:var(--display);font-weight:800;font-size:1.8rem;display:flex;align-items:center;gap:10px;white-space:nowrap}
+.res{width:34px;height:34px;border-radius:8px;display:grid;place-items:center;color:#fff;font-family:var(--display);font-weight:800;font-size:1.1rem}
+.res.V{background:var(--win)}.res.N{background:var(--draw)}.res.D{background:var(--loss)}
+.hour{font-family:var(--display);font-weight:800;font-size:1.55rem;text-align:right}
+.hour small{display:block;font-family:var(--body);font-weight:600;font-size:.78rem;color:var(--muted)}
+.more-row{text-align:center;margin-top:18px}
+@media (max-width:700px){.match{grid-template-columns:62px 1fr;gap:4px 12px;padding:14px}.match .crest{display:none}.match .right{grid-column:2}.match .hour{text-align:left;font-size:1.25rem}.match .score{font-size:1.4rem}.match .date b{font-size:1.6rem}}
+
+/* ---------- Classement ---------- */
+.rank-head{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;align-items:baseline;padding:18px 20px 0}
+.rank-head b{font-family:var(--display);font-size:1.4rem;text-transform:uppercase}
+.rank-head span{color:var(--muted);font-size:.9rem}
+.table-wrap{overflow-x:auto}
+table.rank{width:100%;border-collapse:collapse;font-variant-numeric:tabular-nums;min-width:640px}
+.rank th{font-family:var(--display);text-transform:uppercase;letter-spacing:.06em;font-size:.85rem;color:var(--muted);text-align:center;padding:14px 8px;border-bottom:2px solid var(--line)}
+.rank th:nth-child(2){text-align:left}
+.rank td{padding:11px 8px;text-align:center;border-bottom:1px solid var(--line)}
+.rank td:nth-child(2){text-align:left;font-weight:600}
+.rank td.tm{display:flex;align-items:center;gap:10px}
+.rank td.tm .crest{width:28px;height:28px;margin:0;font-size:.62rem;flex:none}
+.rank td.pts{font-family:var(--display);font-weight:800;font-size:1.25rem}
+.rank tr.us td{background:var(--gold-soft)}
+.rank tr.us td:nth-child(2){font-weight:800}
+.pos{display:inline-grid;place-items:center;width:28px;height:28px;border-radius:7px;font-weight:700;background:#f0ece2}
+tr.us .pos{background:var(--ink);color:var(--gold)}
+
+/* ---------- Équipes ---------- */
+.teams-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(270px,1fr));gap:18px}
+.team-card{padding:22px;display:flex;flex-direction:column;gap:12px;border-top:4px solid var(--gold)}
+.team-card .lvl{align-self:flex-start;font-size:.78rem;font-weight:700;background:var(--paper);border:1px solid var(--line);padding:4px 9px;border-radius:999px}
+.team-card h3{font-size:1.8rem}
+.team-card .off{font-size:.85rem;color:var(--muted);margin-top:-6px}
+.team-card .rk{display:flex;align-items:baseline;gap:8px}
+.team-card .rk b{font-family:var(--display);font-size:2.4rem;font-weight:800;line-height:1}
+.team-card .rk span{color:var(--muted);font-size:.9rem}
+.team-card ul{list-style:none;font-size:.92rem;display:flex;flex-direction:column;gap:8px;border-top:1px solid var(--line);padding-top:12px}
+.team-card li small{display:block;font-size:.75rem;text-transform:uppercase;letter-spacing:.06em;color:var(--muted);font-weight:700}
+.team-card a.ext{margin-top:auto;font-weight:700;font-size:.9rem;color:var(--gold-dark);text-decoration:none}
+.team-card a.ext:hover{text-decoration:underline}
+.team-card.practice{border-top-color:var(--ink)}
+
+/* ---------- Inscriptions ---------- */
+.dark{background:var(--ink);color:#fff}
+.dark .lead{color:rgba(255,255,255,.72)}
+.dark .kicker{color:var(--gold)}
+.reg-grid{display:grid;grid-template-columns:1fr 1.1fr;gap:40px;align-items:start;margin-top:40px}
+.steps{list-style:none;counter-reset:s;display:flex;flex-direction:column;gap:18px}
+.steps li{counter-increment:s;display:grid;grid-template-columns:44px 1fr;gap:14px}
+.steps li::before{content:counter(s);width:44px;height:44px;border-radius:12px;background:var(--gold);color:var(--ink);display:grid;place-items:center;font-family:var(--display);font-weight:800;font-size:1.4rem}
+.steps b{display:block;font-size:1.05rem}
+.steps span{opacity:.72;font-size:.94rem}
+.aides{margin-top:26px;padding:18px 20px;border:1px dashed rgba(255,255,255,.25);border-radius:12px;font-size:.94rem;opacity:.9}
+.aides b{color:var(--gold)}
+@media (max-width:900px){.reg-grid{grid-template-columns:1fr}}
+
+form.f{display:grid;grid-template-columns:1fr 1fr;gap:14px;padding:28px;background:#fff;color:var(--ink);border-radius:18px}
+form.f .full{grid-column:1/-1}
+form.f label{display:flex;flex-direction:column;gap:6px;font-weight:600;font-size:.9rem}
+form.f input,form.f select,form.f textarea{font:inherit;font-weight:500;padding:12px 14px;border-radius:10px;border:1.5px solid var(--line);background:#fdfcf9;color:var(--ink);width:100%}
+form.f textarea{min-height:110px;resize:vertical}
+form.f input:focus,form.f select:focus,form.f textarea:focus{outline:none;border-color:var(--ink);background:#fff}
+form.f .check{flex-direction:row;align-items:flex-start;gap:10px;font-weight:500;font-size:.86rem;color:var(--muted)}
+form.f .check input{width:18px;height:18px;margin-top:2px;flex:none}
+form.f h3{grid-column:1/-1;font-size:1.6rem}
+form.f .hint{grid-column:1/-1;font-size:.88rem;color:var(--muted);margin-top:-6px}
+.err{color:var(--loss);font-size:.82rem;font-weight:600;min-height:1em}
+.recap{grid-column:1/-1;background:var(--paper);border-radius:12px;padding:16px;display:none}
+.recap.show{display:block}
+.recap pre{white-space:pre-wrap;font-family:ui-monospace,Menlo,monospace;font-size:.82rem;background:#fff;border:1px solid var(--line);border-radius:8px;padding:12px;margin:10px 0;max-height:220px;overflow:auto}
+@media (max-width:640px){form.f{grid-template-columns:1fr;padding:20px}}
+
+/* ---------- Club ---------- */
+.club-grid{display:grid;grid-template-columns:1.1fr 1fr;gap:48px;align-items:center}
+.club-logo{width:min(320px,80%);aspect-ratio:1;margin:auto;border-radius:50%;background:var(--ink);display:grid;place-items:center;box-shadow:0 30px 60px rgba(0,0,0,.25);overflow:hidden}
+.club-logo img{width:100%;height:100%;object-fit:cover}
+.facts{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:28px}
+.fact{padding:18px}
+.fact b{font-family:var(--display);text-transform:uppercase;font-size:1.25rem;display:block}
+.fact span{color:var(--muted);font-size:.92rem}
+.volunteer{margin-top:64px;padding:36px;display:grid;grid-template-columns:1.4fr 1fr;gap:28px;align-items:center;background:var(--gold);border:0}
+.volunteer h3{font-size:2.2rem}
+.volunteer .chips .chip{background:rgba(255,255,255,.55);border-color:transparent}
+@media (max-width:900px){.club-grid,.volunteer{grid-template-columns:1fr}}
+
+/* ---------- Contact ---------- */
+.contact-grid{display:grid;grid-template-columns:1fr 1.1fr;gap:40px}
+.info-list{list-style:none;display:flex;flex-direction:column;gap:18px;margin-top:24px}
+.info-list li{display:grid;grid-template-columns:44px 1fr;gap:14px;align-items:start}
+.info-list .ic{width:44px;height:44px;border-radius:12px;background:var(--ink);color:var(--gold);display:grid;place-items:center}
+.info-list .ic svg{width:20px;height:20px}
+.info-list b{display:block}
+.info-list span,.info-list a{color:var(--muted);font-size:.95rem}
+.contact-grid form.f{border:1px solid var(--line);box-shadow:var(--shadow)}
+@media (max-width:900px){.contact-grid{grid-template-columns:1fr}}
+
+footer{background:#0b0b0b;color:rgba(255,255,255,.75);padding:60px 0 28px;font-size:.94rem}
+.foot-grid{display:grid;grid-template-columns:1.5fr 1fr 1fr 1fr;gap:32px}
+footer h4{font-family:var(--display);text-transform:uppercase;color:var(--gold);font-size:1.1rem;letter-spacing:.06em;margin-bottom:14px}
+footer ul{list-style:none;display:flex;flex-direction:column;gap:8px}
+footer a{text-decoration:none}
+footer a:hover{color:#fff;text-decoration:underline}
+.legal{border-top:1px solid rgba(255,255,255,.1);margin-top:44px;padding-top:22px;display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;font-size:.85rem;opacity:.7}
+@media (max-width:900px){.foot-grid{grid-template-columns:1fr 1fr}}
+
+.modal{position:fixed;inset:0;background:rgba(0,0,0,.7);z-index:100;display:none;place-items:center;padding:20px}
+.modal.open{display:grid}
+.modal .box{background:#fff;border-radius:18px;max-width:680px;width:100%;max-height:90vh;overflow:auto;position:relative;padding:30px 32px}
+.modal .box h3{font-size:2rem;margin-bottom:16px}
+.modal .box p{margin-bottom:12px;color:#333}
+.modal .close{position:absolute;right:14px;top:14px;width:42px;height:42px;border-radius:50%;border:0;background:var(--paper);font-size:1.4rem}
+.toast{visibility:hidden;opacity:0;position:fixed;bottom:24px;left:50%;transform:translateX(-50%) translateY(120px);background:var(--ink);color:#fff;padding:14px 22px;border-radius:12px;font-weight:600;z-index:200;transition:transform .3s,opacity .3s}
+.toast.show{visibility:visible;opacity:1;transform:translateX(-50%) translateY(0)}
+.alt{background:#efebe1}
+
+/* ---------- Instagram ---------- */
+.insta{background:var(--ink);color:#fff;position:relative;overflow:hidden}
+.insta::before{content:"";position:absolute;inset:-40% -10% auto auto;width:620px;height:620px;border-radius:50%;background:radial-gradient(circle,rgba(246,189,22,.18),transparent 65%);pointer-events:none}
+.insta-grid{display:grid;grid-template-columns:340px 1fr;gap:44px;align-items:start;position:relative}
+.insta-card{background:var(--ink-2);border:1px solid rgba(255,255,255,.08);border-radius:22px;padding:28px;text-align:center}
+.story-btn{display:inline-block;border:0;background:none;padding:0;text-decoration:none;color:inherit}
+.ring{width:150px;height:150px;border-radius:50%;padding:5px;margin:0 auto;background:conic-gradient(from 0deg,#feda75,#fa7e1e,#d62976,#962fbf,#4f5bd5,#feda75);animation:spin 6s linear infinite}
+.ring-in{width:100%;height:100%;border-radius:50%;background:var(--ink-2);padding:5px;animation:spin 6s linear infinite reverse}
+.ring-in .logo{width:100%;height:100%;border-radius:50%;overflow:hidden;background:var(--gold);display:grid;place-items:center}
+.ring-in .logo img{width:100%;height:100%;object-fit:cover}
+@keyframes spin{to{transform:rotate(360deg)}}
+@media (prefers-reduced-motion:reduce){.ring,.ring-in{animation:none}}
+.story-label{display:inline-flex;align-items:center;gap:6px;margin-top:-14px;position:relative;background:linear-gradient(90deg,#d62976,#fa7e1e);color:#fff;font-family:var(--display);font-weight:800;text-transform:uppercase;letter-spacing:.08em;font-size:.78rem;padding:4px 12px;border-radius:999px;border:3px solid var(--ink-2)}
+.insta-card h3{font-size:1.6rem;margin-top:16px}
+.insta-card .bio{opacity:.8;font-size:.95rem;margin:8px 0 20px}
+.insta-card .bio b{color:var(--gold)}
+.insta-card .btns{display:flex;flex-direction:column;gap:10px}
+.btn-insta{background:linear-gradient(90deg,#962fbf,#d62976,#fa7e1e);color:#fff;justify-content:center}
+.insta-card .btn-ghost{justify-content:center;color:#fff}
+.insta-card small{display:block;margin-top:14px;opacity:.5;font-size:.78rem}
+.posts{display:flex;gap:18px;overflow-x:auto;scroll-snap-type:x mandatory;padding-bottom:14px;scrollbar-width:thin;scrollbar-color:var(--gold) transparent}
+.post{flex:0 0 340px;scroll-snap-align:start;background:#fff;border-radius:16px;overflow:hidden;min-height:420px;display:flex;flex-direction:column}
+.post .instagram-media{margin:0!important;min-width:0!important;width:100%!important;border:0!important;border-radius:0!important;box-shadow:none!important}
+.post>blockquote{flex:1;display:flex;margin:0;padding:0;background:#fff}
+.post-fallback{flex:1;width:100%;display:grid;place-items:center;text-align:center;padding:30px;color:var(--ink);text-decoration:none;background:linear-gradient(135deg,var(--gold-soft),#fff)}
+.post-fallback b{font-family:var(--display);font-size:1.4rem;text-transform:uppercase;display:block;margin:10px 0 6px}
+.posts-nav{display:flex;gap:8px;justify-content:flex-end;margin-bottom:14px}
+.posts-nav button{width:42px;height:42px;border-radius:50%;border:1.5px solid rgba(255,255,255,.25);background:transparent;color:#fff;font-size:1.1rem}
+.posts-nav button:hover{background:var(--gold);color:var(--ink);border-color:var(--gold)}
+@media (max-width:900px){.insta-grid{grid-template-columns:1fr}.post{flex-basis:300px}}
+</style>
+</head>
+<body>
+
+<header class="top">
+  <div class="wrap">
+    <a class="brand" href="#accueil" data-nav>
+      <span class="logo" data-logo="64"></span>
+      <span><b>ASC Bonsecours</b><small>Handball · depuis 1967</small></span>
+    </a>
+    <nav class="main" id="nav" aria-label="Navigation principale">
+      <ul>
+        <li><a href="#weekend" data-nav>Le week-end</a></li>
+        <li><a href="#instagram" data-nav>Instagram</a></li>
+        <li><a href="#matchs" data-nav>Matchs</a></li>
+        <li><a href="#classement" data-nav>Classements</a></li>
+        <li><a href="#equipes" data-nav>Équipes</a></li>
+        <li><a href="#inscriptions" data-nav>Inscriptions</a></li>
+        <li><a href="#club" data-nav>Le club</a></li>
+        <li><a href="#contact" data-nav>Contact</a></li>
+      </ul>
+    </nav>
+    <a class="btn btn-gold btn-sm cta-head" href="#inscriptions" data-nav>Rejoindre le club</a>
+    <button class="burger" id="burger" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="nav"><span></span><span></span><span></span></button>
+  </div>
+</header>
+
+<main>
+<section class="hero" id="accueil">
+  <svg class="court" viewBox="0 0 400 300" aria-hidden="true" fill="none" stroke="#fff" stroke-width="3">
+    <rect x="10" y="10" width="380" height="280"/><path d="M390 50 A110 110 0 0 0 390 250"/>
+    <path d="M390 20 A150 150 0 0 0 240 150 A150 150 0 0 0 390 280" stroke-dasharray="14 10"/>
+    <line x1="390" y1="130" x2="390" y2="170" stroke-width="8"/><circle cx="10" cy="150" r="40"/>
+  </svg>
+  <div class="wrap">
+    <div class="hero-grid">
+      <div>
+        <div class="kicker" style="color:var(--gold)">Saison <span id="saison">2026-2027</span></div>
+        <h1>Le hand à<br><em>Bonsecours</em>.</h1>
+        <p class="sub">Du baby hand aux seniors, venez jouer, encourager ou donner un coup de main à l'ASC Bonsecours, aux portes de Rouen. Matchs, résultats et classements de toutes nos équipes, à jour automatiquement.</p>
+        <div class="actions">
+          <a class="btn btn-gold" href="#inscriptions" data-nav>S'inscrire au club</a>
+          <a class="btn btn-ghost" href="#matchs" data-nav>Voir les matchs</a>
+        </div>
+      </div>
+      <aside class="next" aria-label="Prochain match à domicile" id="nextMatch"></aside>
+    </div>
+    <div class="stats" id="stats"></div>
+  </div>
+</section>
+
+<div class="ticker" aria-hidden="true"><div class="track" id="ticker"></div></div>
+
+<section id="weekend">
+  <div class="wrap">
+    <div class="sec-head">
+      <div><div class="kicker">Les derniers résultats</div><h2>Le week-end au club</h2></div>
+      <div class="chips" id="newsFilter" role="group" aria-label="Filtrer par équipe"></div>
+    </div>
+    <div class="news-grid" id="newsGrid"></div>
+  </div>
+</section>
+
+<section id="instagram" class="insta">
+  <div class="wrap">
+    <div class="sec-head">
+      <div><div class="kicker" style="color:var(--gold)">#forzabonox</div><h2>Sur Instagram</h2></div>
+      <div class="posts-nav" aria-hidden="false"><button type="button" data-dir="-1" aria-label="Publications précédentes">←</button><button type="button" data-dir="1" aria-label="Publications suivantes">→</button></div>
+    </div>
+    <div class="insta-grid">
+      <div class="insta-card">
+        <a class="story-btn" id="storyLink" href="#" target="_blank" rel="noopener" aria-label="Voir la story Instagram du club">
+          <div class="ring"><div class="ring-in"><div class="logo" data-logo="256"></div></div></div>
+          <span class="story-label">● Story</span>
+        </a>
+        <h3 id="instaHandle">@ascbonsecours</h3>
+        <p class="bio" id="instaBio"></p>
+        <div class="btns">
+          <a class="btn btn-insta" id="storyBtn" href="#" target="_blank" rel="noopener">Voir la dernière story</a>
+          <a class="btn btn-ghost" id="followBtn" href="#" target="_blank" rel="noopener">Suivre le club</a>
+        </div>
+        <small>Les stories s'ouvrent sur Instagram (connexion Instagram parfois demandée).</small>
+      </div>
+      <div class="posts" id="posts" tabindex="0" aria-label="Dernières publications Instagram"></div>
+    </div>
+  </div>
+</section>
+
+<section id="matchs" class="alt">
+  <div class="wrap">
+    <div class="sec-head"><div><div class="kicker">Toutes les équipes</div><h2>Calendrier &amp; résultats</h2></div></div>
+    <div class="matches-bar">
+      <div class="seg" role="tablist" aria-label="Type de matchs">
+        <button role="tab" aria-selected="true" data-mode="avenir">À venir</button>
+        <button role="tab" aria-selected="false" data-mode="resultats">Résultats</button>
+      </div>
+      <label><span class="sr">Équipe</span><select id="teamFilter"></select></label>
+    </div>
+    <div class="match-list" id="matchList"></div>
+    <div class="more-row" id="moreRow"></div>
+    <p class="src" id="srcMatchs"></p>
+  </div>
+</section>
+
+<section id="classement">
+  <div class="wrap">
+    <div class="sec-head">
+      <div><div class="kicker">Championnats</div><h2>Classements</h2></div>
+      <div class="seg" role="tablist" id="rankTabs" aria-label="Équipe"></div>
+    </div>
+    <div class="card" id="rankCard"></div>
+    <p class="src" id="srcRank"></p>
+  </div>
+</section>
+
+<section id="equipes" class="alt">
+  <div class="wrap">
+    <div class="sec-head"><div><div class="kicker">Saison en cours</div><h2>Nos équipes</h2>
+      <p class="lead">Les équipes engagées en compétition cette saison, avec leur championnat, leur position et leur prochain match.</p></div></div>
+    <div class="teams-grid" id="teamsGrid"></div>
+  </div>
+</section>
+
+<section id="inscriptions" class="dark">
+  <div class="wrap">
+    <div class="kicker">Saison <span class="saison">2026-2027</span></div>
+    <h2>Rejoignez le club</h2>
+    <p class="lead">Débutant ou confirmé, enfant ou adulte : venez essayer. La licence se prend en ligne sur la plateforme de la Fédération, le club vous guide.</p>
+    <div class="reg-grid">
+      <div>
+        <ol class="steps">
+          <li><div><b>Contactez le club</b><span>Par le formulaire ci-contre ou par e-mail, pour connaître la catégorie de votre enfant (ou la vôtre), les horaires et le gymnase.</span></div></li>
+          <li><div><b>Venez faire un essai</b><span>Une tenue de sport et une paire de baskets propres suffisent.</span></div></li>
+          <li><div><b>Demandez votre licence en ligne</b><span>Sur Gest'Hand, la plateforme de la FFHandball : photo, pièce d'identité, questionnaire de santé ou certificat médical selon les cas.</span></div></li>
+          <li><div><b>Réglez la cotisation</b><span>Le club vous indique le montant et les moyens de paiement acceptés.</span></div></li>
+        </ol>
+        <p style="margin-top:26px"><a class="btn btn-gold" id="gesthandBtn" href="#" target="_blank" rel="noopener">Faire ma demande de licence en ligne ↗</a></p>
+        <div class="aides"><b>Bon à savoir :</b> demandez au club quelles aides sont acceptées (Pass'Sport, aides de la commune ou du département, comités d'entreprise…).</div>
+      </div>
+      <form class="f" id="regForm" novalidate>
+        <h3>Demande de renseignements</h3>
+        <p class="hint">Remplissez, puis envoyez le message au club depuis votre messagerie.</p>
+        <label>Prénom du joueur / de la joueuse<input name="prenom" required autocomplete="given-name"><span class="err"></span></label>
+        <label>Nom<input name="nom" required autocomplete="family-name"><span class="err"></span></label>
+        <label>Date de naissance<input type="date" name="naissance" required><span class="err"></span></label>
+        <label>Catégorie (indicative)<input name="categorie" readonly placeholder="Selon la date de naissance"></label>
+        <label>E-mail du contact<input type="email" name="email" required autocomplete="email"><span class="err"></span></label>
+        <label>Téléphone<input type="tel" name="tel" required autocomplete="tel"><span class="err"></span></label>
+        <label class="full">Pratique souhaitée
+          <select name="pratique"><option>Handball (compétition)</option><option>Baby hand</option><option>Je ne sais pas encore</option></select>
+        </label>
+        <label class="full">Déjà licencié(e) ? Questions
+          <textarea name="message" placeholder="Ancien club, poste, questions sur les horaires…"></textarea>
+        </label>
+        <label class="check full"><input type="checkbox" name="rgpd" required> J'accepte que le club utilise ces informations uniquement pour répondre à ma demande.</label>
+        <span class="err full" id="rgpdErr"></span>
+        <div class="full"><button class="btn btn-gold" type="submit">Préparer ma demande</button></div>
+        <div class="recap" id="regRecap" aria-live="polite"></div>
+      </form>
+    </div>
+  </div>
+</section>
+
+<section id="club">
+  <div class="wrap">
+    <div class="club-grid">
+      <div>
+        <div class="kicker">Association sportive</div>
+        <h2>L'ASC Bonsecours</h2>
+        <p class="lead">Club de handball de Bonsecours, sur les hauteurs de Rouen, né en 1967. Affilié à la FFHandball (Comité de Seine-Maritime, Ligue de Normandie), il engage cette saison des équipes de jeunes et deux équipes seniors, dont une au niveau régional.</p>
+        <div class="facts" id="facts"></div>
+      </div>
+      <div class="club-logo" data-logo="512"></div>
+    </div>
+    <div class="card volunteer">
+      <div>
+        <h3>On a besoin de vous !</h3>
+        <p style="margin-top:10px">Table de marque, arbitrage, buvette, covoiturage des jeunes, photos, réseaux sociaux… Une heure de temps en temps, c'est déjà beaucoup. Pas besoin d'expérience.</p>
+        <div class="chips" style="margin-top:16px"><span class="chip">Table de marque</span><span class="chip">Arbitrage</span><span class="chip">Buvette</span><span class="chip">Covoiturage</span><span class="chip">Communication</span></div>
+      </div>
+      <div><a class="btn btn-dark" href="#contact" data-nav data-subject="Devenir bénévole">Je donne un coup de main</a></div>
+    </div>
+  </div>
+</section>
+
+<section id="contact" class="alt">
+  <div class="wrap">
+    <div class="contact-grid">
+      <div>
+        <div class="kicker">On se retrouve au gymnase</div>
+        <h2>Contact</h2>
+        <ul class="info-list" id="infoList"></ul>
+      </div>
+      <form class="f" id="contactForm" novalidate>
+        <h3>Écrire au club</h3>
+        <p class="hint">Le message s'ouvre dans votre messagerie, prêt à envoyer.</p>
+        <label>Nom<input name="nom" required autocomplete="name"><span class="err"></span></label>
+        <label>E-mail<input type="email" name="email" required autocomplete="email"><span class="err"></span></label>
+        <label class="full">Objet
+          <select name="objet" id="contactSubject"><option>Renseignements / inscription</option><option>Devenir bénévole</option><option>Partenariat / sponsoring</option><option>Arbitrage</option><option>Autre</option></select>
+        </label>
+        <label class="full">Message<textarea name="message" required></textarea><span class="err"></span></label>
+        <div class="full"><button class="btn btn-dark" type="submit">Préparer le message</button></div>
+        <div class="recap" id="contactRecap" aria-live="polite"></div>
+      </form>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <div class="brand" style="color:#fff"><span class="logo" data-logo="64"></span><span><b>ASC Bonsecours</b><small>Handball · Affilié FFHandball</small></span></div>
+        <p style="margin-top:16px;max-width:38ch">Matchs, scores et classements récupérés automatiquement sur ffhandball.fr.</p>
+      </div>
+      <div><h4>Sportif</h4><ul><li><a href="#matchs" data-nav>Calendrier</a></li><li><a href="#classement" data-nav>Classements</a></li><li><a href="#equipes" data-nav>Équipes</a></li></ul></div>
+      <div><h4>Le club</h4><ul><li><a href="#inscriptions" data-nav>Inscriptions</a></li><li><a href="#club" data-nav>Présentation</a></li><li><a href="#contact" data-nav data-subject="Devenir bénévole">Bénévolat</a></li></ul></div>
+      <div><h4>Liens</h4><ul><li><a id="ffhbLink" href="#" target="_blank" rel="noopener">Le club sur ffhandball.fr</a></li><li><a id="monclubLink" href="#" target="_blank" rel="noopener">Fiche « Mon Club »</a></li><li><a href="#" id="legalLink">Mentions légales</a></li></ul></div>
+    </div>
+    <div class="legal"><span>© <span id="year"></span> A.S.C. Bonsecours Handball</span><span id="majFooter"></span></div>
+  </div>
+</footer>
+
+<div class="modal" id="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle"><div class="box"><button class="close" aria-label="Fermer">×</button><div id="modalBody"></div></div></div>
+<div class="toast" id="toast" role="status"></div>
+
+<!-- Données sportives : générées automatiquement depuis ffhandball.fr (voir sync/) -->
+<script src="data/ffhb.js"></script>
+<script>
+/* =========================================================================
+   INFOS DU CLUB — à compléter / corriger ici si besoin.
+   Matchs, scores, classements et équipes viennent tout seuls de ffhandball.fr.
+   ========================================================================= */
+const CLUB = {
+  nom: "A.S.C. Bonsecours",
+  licencies: 113,                     // source : fiche « Mon Club » FFHandball
+  email: "5976015@normandie.ffhandball.net",
+  telephone: "",                      // à ajouter si le club le souhaite
+  adresse: "1a avenue José Maria de Heredia, 76240 Bonsecours",
+  pratiques: ["Handball à 7", "Baby hand"],
+  inscriptionUrl: "https://gesthand.net/ihand-central/public/individu/inscription/2885?crtl=287bcb5be433c60f33f54cd1fac0191b6d067",
+  monClubUrl: "https://monclub.ffhandball.fr/clubs/a-s-c-bonsecours/",
+  ffhbRechercheUrl: "https://www.ffhandball.fr/competitions/saison-2026-2027-22/recherche/?type=structure&q=bonsecours",
+  // Instagram : compte du club et publications mises en avant (copier l'adresse d'un post
+  // ou d'un reel depuis Instagram, la plus récente en premier).
+  instagram: {
+    compte: "ascbonsecours",
+    bio: "Plus qu'un club, une famille",
+    publications: [
+      "https://www.instagram.com/p/DfZWWiKCPKm/",
+      "https://www.instagram.com/p/DfXW96ZiKyi/",
+      "https://www.instagram.com/reel/DfU1jfbTRyP/",
+      "https://www.instagram.com/reel/Deymwl6o_wz/",
+      "https://www.instagram.com/p/DerMcwwIPEE/",
+      "https://www.instagram.com/reel/Dej5r9KIXw2/"
+    ]
+  },
+  // Créneaux d'entraînement par catégorie, ex. : "-13 M": ["Mercredi 17h-18h30"]
+  entrainements: {},
+  // Responsable de la publication (mentions légales)
+  editeur: "[à compléter : nom du ou de la responsable de la publication]",
+  hebergeur: "GitHub Pages — GitHub Inc., 88 Colin P Kelly Jr Street, San Francisco, CA 94107, États-Unis"
+};
+const LOGO_CDN = "https://media-logos-clubs.ffhandball.fr";
+
+/* ====================================================================== */
+const DATA = window.FFHB || { meta:{}, equipes:[], matchs:[] };
+const $ = (s, el=document) => el.querySelector(s);
+const $$ = (s, el=document) => [...el.querySelectorAll(s)];
+const esc = s => String(s ?? "").replace(/[&<>"']/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+const JOURS = ["Dim","Lun","Mar","Mer","Jeu","Ven","Sam"];
+const MOIS = ["janv.","févr.","mars","avr.","mai","juin","juil.","août","sept.","oct.","nov.","déc."];
+const fmtLong = d => d.toLocaleDateString("fr-FR",{weekday:"long",day:"numeric",month:"long"});
+const fmtHour = d => d.toLocaleTimeString("fr-FR",{hour:"2-digit",minute:"2-digit",timeZone:"Europe/Paris"}).replace(":","h");
+const hue = s => [...String(s)].reduce((a,c)=>a+c.charCodeAt(0),0)%360;
+const initials = s => String(s).replace(/[^A-Za-zÀ-ÿ0-9 ]/g," ").split(/\s+/).filter(w=>w.length>1 && !/^(HB|HBC|AS|US|CS|AL|ES|CA|CJ|E|ST|DE|DU|LE|LA)$/i.test(w)).slice(0,2).map(w=>w[0]).join("").toUpperCase() || String(s).slice(0,2).toUpperCase();
+const logoUrl = (stem, size=64) => stem ? `${LOGO_CDN}/${size}/${stem}.webp` : "";
+const crest = (name, stem, us=false) => {
+  const ini = us ? "ASC" : initials(name);
+  const fb = `<span>${esc(ini)}</span>`;
+  const bg = us ? "var(--ink)" : `hsl(${hue(name)} 30% 38%)`;
+  return `<div class="crest" style="background:${bg}">${stem ? `<img src="${logoUrl(stem)}" alt="" loading="lazy" onerror="this.replaceWith(Object.assign(document.createElement('span'),{textContent:'${esc(ini)}'}))">` : fb}</div>`;
+};
+const icons = {
+  pin:'<svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg>',
+  mail:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>',
+  phone:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 3h4l2 5-2.5 1.5a11 11 0 0 0 6 6L16 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 5a2 2 0 0 1 2-2"/></svg>',
+  link:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M10 14a5 5 0 0 0 7 0l3-3a5 5 0 0 0-7-7l-1 1"/><path d="M14 10a5 5 0 0 0-7 0l-3 3a5 5 0 0 0 7 7l1-1"/></svg>'
+};
+
+/* ---------- Mise en forme des données FFHB ---------- */
+const TEAMS = Object.fromEntries(DATA.equipes.map(e => [e.id, e]));
+const CAT_ORDER = c => { const m = c.match(/^-(\d+)/); return m ? +m[1] : (c.startsWith("Seniors") ? 200 - (+(c.match(/(\d)$/)||[0,1])[1]) : 100); };
+const CATS = [...new Set(DATA.equipes.map(e => e.categorie))].sort((a,b) => CAT_ORDER(b) - CAT_ORDER(a));
+function compLabel(t){
+  const c = t.competition;
+  if (/COUPE DE FRANCE/i.test(c)) return "Coupe de France régionale";
+  if (/COUPE DE NORMANDIE/i.test(c)) return "Coupe de Normandie";
+  if (/COUPE/i.test(c) && /\b76\b/.test(c)) return "Coupe de Seine-Maritime";
+  if (/HONNEUR/i.test(c)) return "Honneur régional";
+  if (/1ERE DIV/i.test(c)) return "1re division départementale";
+  if (/CHAMPIONNAT 76/i.test(c)) return "Championnat de Seine-Maritime";
+  return c.charAt(0) + c.slice(1).toLowerCase();
+}
+function phaseLabel(t){
+  let p = String(t.phase).replace(t.competition, "").replace(/^[\s-]+/, "").trim();
+  if (!p) return t.poule && !/UNIQUE/i.test(t.poule) ? cap(t.poule) : "";
+  p = cap(p.replace(/ - /g, " · "));
+  return t.poule && !/^TOUR/i.test(t.poule) ? `${p} · ${cap(t.poule)}` : p;
+}
+const lc = s => s.charAt(0).toLowerCase() + s.slice(1);
+function cap(s){ s = String(s).toLowerCase(); return s.charAt(0).toUpperCase() + s.slice(1); }
+const isPlayed = m => !!(m.score || m.forfait);
+function result(m){
+  if (m.forfait) return m.forfait.perdant === "adv" ? "V" : "D";
+  if (!m.score) return null;
+  return m.score[0] > m.score[1] ? "V" : m.score[0] < m.score[1] ? "D" : "N";
+}
+function scoreText(m){
+  if (m.score) return `${m.score[0]} – ${m.score[1]}`;
+  if (m.forfait) return ({FO:"Forfait",PE:"Pénalité"}[m.forfait.code] || m.forfait.code) + (m.forfait.perdant === "adv" ? " adv." : "");
+  return "";
+}
+const MATCHS = DATA.matchs.map(m => ({...m, t: TEAMS[m.equipe] || {}, d: m.date ? new Date(m.date) : null}));
+/* Équipe « principale » d'une catégorie : le championnat (pas la coupe) le plus récent */
+function mainTeam(cat){
+  const ts = DATA.equipes.filter(e => e.categorie === cat);
+  const champ = ts.filter(e => !e.coupe);
+  const pool = champ.length ? champ : ts;
+  return pool.slice().sort((a,b) =>
+    (/PREPARATOIRE/i.test(a.phase) - /PREPARATOIRE/i.test(b.phase)) ||
+    String(b.majFFHB).localeCompare(String(a.majFFHB)))[0];
+}
+
+/* ---------- En-tête, logos, liens ---------- */
+$$("[data-logo]").forEach(el => {
+  const stem = DATA.meta.clubLogo;
+  const fb = `<span style="font-family:var(--display);font-weight:800;color:var(--ink);font-size:${el.dataset.logo > 300 ? "5rem" : el.dataset.logo > 100 ? "2.6rem" : "1rem"}">ASC</span>`;
+  el.style.background = "var(--gold)";
+  el.innerHTML = stem ? `<img src="${logoUrl(stem, el.dataset.logo)}" alt="Logo de l'ASC Bonsecours">` : fb;
+  const img = $("img", el); if (img) img.onerror = () => { el.innerHTML = fb; };
+});
+$$("#saison,.saison").forEach(el => el.textContent = DATA.meta.saison || el.textContent);
+$("#year").textContent = new Date().getFullYear();
+$("#gesthandBtn").href = CLUB.inscriptionUrl;
+$("#ffhbLink").href = CLUB.ffhbRechercheUrl;
+$("#monclubLink").href = CLUB.monClubUrl;
+const majDate = DATA.meta.majSite ? new Date(DATA.meta.majSite) : null;
+const majTxt = majDate ? `Données ffhandball.fr mises à jour le ${majDate.toLocaleDateString("fr-FR",{day:"numeric",month:"long"})} à ${fmtHour(majDate)}` : "";
+$("#majFooter").textContent = majTxt;
+const srcHtml = `Source : <a href="${CLUB.ffhbRechercheUrl}" target="_blank" rel="noopener">ffhandball.fr</a>${majTxt ? " · " + majTxt.replace("Données ffhandball.fr m","M") : ""}`;
+$("#srcMatchs").innerHTML = srcHtml; $("#srcRank").innerHTML = srcHtml;
+
+/* ---------- Stats ---------- */
+const played = MATCHS.filter(isPlayed);
+const wins = played.filter(m => result(m) === "V").length;
+$("#stats").innerHTML = [
+  [CLUB.licencies, "licenciés"],
+  [CATS.length, "équipes engagées"],
+  [played.length, "matchs joués cette saison"],
+  [wins, "victoires"]
+].map(([v,l]) => `<div><b>${esc(v)}</b><span>${esc(l)}</span></div>`).join("");
+
+/* ---------- Bandeau ---------- */
+const lastRes = played.slice().sort((a,b) => (b.d||0) - (a.d||0)).slice(0, 8);
+const tick = lastRes.map(m => `${m.t.categorie} ${scoreText(m)} ${m.dom ? "vs" : "à"} ${m.adv}`);
+if (tick.length) $("#ticker").innerHTML = [...tick, ...tick].map(t => `<span>${esc(t)}</span>`).join("");
+else $(".ticker").remove();
+
+/* ---------- Prochain match à domicile ---------- */
+function renderNext(){
+  const now = Date.now();
+  const up = MATCHS.filter(m => !isPlayed(m) && m.d && m.d.getTime() + 2*3600e3 > now).sort((a,b) => a.d - b.d);
+  const homeUp = up.filter(m => m.dom);
+  // Le jour du prochain match à domicile, on met en avant l'équipe du plus haut niveau.
+  const sameDay = homeUp.filter(x => homeUp.length && x.d - homeUp[0].d < 20*3600e3);
+  const m = sameDay.sort((a,b) => CAT_ORDER(b.t.categorie) - CAT_ORDER(a.t.categorie))[0] || up[0];
+  const box = $("#nextMatch");
+  if (!m){ box.innerHTML = `<span class="tag">Calendrier</span><h3 style="margin-top:14px">Pas de match programmé</h3><p class="comp">Les prochaines dates apparaîtront ici dès leur publication par la fédération.</p>`; return; }
+  const us = `ASC Bonsecours`;
+  const home = m.dom ? [us, DATA.meta.clubLogo, true] : [m.adv, m.advLogo, false];
+  const away = m.dom ? [m.adv, m.advLogo, false] : [us, DATA.meta.clubLogo, true];
+  box.innerHTML = `
+    <span class="tag">${m.dom ? "Prochain match à domicile" : "Prochain match"}</span>
+    <div class="comp">${esc(m.t.categorie)} · ${esc(compLabel(m.t))}${m.journee ? " · J" + m.journee : ""}</div>
+    <div class="versus">
+      <div class="team">${crest(home[0], home[1], home[2])}${esc(home[0])}</div><div class="vs">VS</div>
+      <div class="team">${crest(away[0], away[1], away[2])}${esc(away[0])}</div>
+    </div>
+    <div class="countdown" id="cd"></div>
+    <div class="where">${icons.pin}<span><b style="color:var(--ink);text-transform:capitalize">${fmtLong(m.d)} · ${fmtHour(m.d)}</b><br>${m.dom ? "À domicile, à Bonsecours — venez nombreux !" : "À l'extérieur"}</span></div>`;
+  const tickCd = () => {
+    const s = Math.max(0, Math.floor((m.d - Date.now()) / 1000));
+    $("#cd").innerHTML = [[Math.floor(s/86400),"jours"],[Math.floor(s%86400/3600),"heures"],[Math.floor(s%3600/60),"min"],[s%60,"sec"]]
+      .map(([v,l]) => `<div><b>${String(v).padStart(2,"0")}</b><span>${l}</span></div>`).join("");
+  };
+  tickCd(); setInterval(tickCd, 1000);
+}
+renderNext();
+
+/* ---------- Le week-end : cartes générées depuis les résultats ---------- */
+let newsCat = "Toutes";
+function renderNews(){
+  const cats = ["Toutes", ...CATS.filter(c => played.some(m => m.t.categorie === c))];
+  $("#newsFilter").innerHTML = cats.map(c => `<button class="chip" aria-pressed="${c===newsCat}" data-cat="${esc(c)}">${esc(c)}</button>`).join("");
+  const list = played.filter(m => newsCat === "Toutes" || m.t.categorie === newsCat).sort((a,b) => (b.d||0) - (a.d||0)).slice(0, 6);
+  if (!list.length){ $("#newsGrid").innerHTML = `<div class="card empty" style="grid-column:1/-1">Les premiers résultats de la saison apparaîtront ici.</div>`; return; }
+  $("#newsGrid").innerHTML = list.map(m => {
+    const r = result(m);
+    const verb = m.forfait ? (r === "V" ? `victoire sur ${m.forfait.code === "PE" ? "pénalité" : "forfait"}` : `défaite sur ${m.forfait.code === "PE" ? "pénalité" : "forfait"}`)
+      : ({V:"victoire", D:"défaite", N:"match nul"}[r]);
+    const title = `${m.t.categorie} : ${verb} ${m.dom ? "contre" : "à"} ${m.adv}`;
+    const ecart = m.score ? Math.abs(m.score[0] - m.score[1]) : 0;
+    const cl = lc(compLabel(m.t));
+    const txt = m.forfait ? `Rencontre de ${cl}.` :
+      r === "V" ? `Succès de ${ecart} but${ecart>1?"s":""} ${m.dom ? "à domicile" : "à l'extérieur"} en ${cl}.` :
+      r === "D" ? `Revers de ${ecart} but${ecart>1?"s":""} ${m.dom ? "à domicile" : "à l'extérieur"} en ${cl}.` :
+      `Partage des points en ${cl}.`;
+    return `<a class="card news" href="${esc(m.t.url)}" target="_blank" rel="noopener">
+      <div class="band ${r}"><span class="res ${r}">${r}</span><div><small>${esc(m.t.categorie)} · ${m.dom ? "Domicile" : "Extérieur"}</small><div class="score">${esc(scoreText(m))}</div></div></div>
+      <div class="body"><time>${m.d ? fmtLong(m.d) : ""}</time><h3>${esc(title)}</h3><p>${esc(txt)}</p></div></a>`;
+  }).join("");
+}
+$("#newsFilter").addEventListener("click", e => { const b = e.target.closest("[data-cat]"); if (!b) return; newsCat = b.dataset.cat; renderNews(); });
+renderNews();
+
+/* ---------- Calendrier & résultats ---------- */
+let matchMode = "avenir", showAll = false;
+$("#teamFilter").innerHTML = `<option value="">Toutes les équipes</option>` + CATS.map(c => `<option>${esc(c)}</option>`).join("");
+function renderMatches(){
+  const now = Date.now(), cat = $("#teamFilter").value;
+  let list = MATCHS.filter(m => !cat || m.t.categorie === cat);
+  if (matchMode === "avenir"){
+    const dated = list.filter(m => !isPlayed(m) && m.d && m.d.getTime() + 3*3600e3 > now).sort((a,b) => a.d - b.d);
+    const undated = list.filter(m => !isPlayed(m) && !m.d).sort((a,b) => a.journee - b.journee);
+    list = [...dated, ...undated];
+  } else list = list.filter(isPlayed).sort((a,b) => (b.d||0) - (a.d||0));
+  const LIMIT = 12, total = list.length;
+  if (!showAll) list = list.slice(0, LIMIT);
+  $("#moreRow").innerHTML = total > LIMIT ? `<button class="btn btn-dark btn-sm" id="moreBtn">${showAll ? "Afficher moins" : `Afficher les ${total} matchs`}</button>` : "";
+  if (!list.length){ $("#matchList").innerHTML = `<div class="card empty">Aucun match ${matchMode === "avenir" ? "à venir" : "joué"} pour cette sélection.</div>`; return; }
+  $("#matchList").innerHTML = list.map(m => {
+    const us = `<span class="us">ASC Bonsecours</span>`;
+    const teams = m.dom ? `${us} <span style="color:var(--muted);font-weight:500">vs</span> ${esc(m.adv)}` : `${esc(m.adv)} <span style="color:var(--muted);font-weight:500">vs</span> ${us}`;
+    let right;
+    if (isPlayed(m)){
+      const r = result(m);
+      const s = m.score ? (m.dom ? `${m.score[0]} – ${m.score[1]}` : `${m.score[1]} – ${m.score[0]}`) : scoreText(m);
+      right = `<div class="score"><span style="${m.forfait ? "font-size:1.1rem" : ""}">${esc(s)}</span><span class="res ${r}" title="${{V:"Victoire",N:"Nul",D:"Défaite"}[r]}">${r}</span></div>`;
+    } else right = m.d ? `<div class="hour">${fmtHour(m.d)}</div>` : `<div class="hour" style="font-size:1rem">Date<br>à fixer</div>`;
+    const date = m.d ? `<span>${JOURS[m.d.getDay()]}</span><b>${m.d.getDate()}</b><span>${MOIS[m.d.getMonth()]}</span>` : `<span>Journée</span><b>${m.journee || "–"}</b><span>&nbsp;</span>`;
+    return `<a class="card match" href="${esc(m.t.url)}" target="_blank" rel="noopener" title="Voir sur ffhandball.fr">
+      <div class="date">${date}</div>
+      ${crest(m.adv, m.advLogo)}
+      <div class="info"><small>${esc(m.t.categorie)} · ${esc(compLabel(m.t))}${m.journee ? " · J" + m.journee : ""}</small>
+        <div class="teams"><span class="badge ${m.dom ? "b-dom" : "b-ext"}">${m.dom ? "Dom." : "Ext."}</span>${teams}</div></div>
+      <div class="right">${right}</div></a>`;
+  }).join("");
+}
+$$(".seg [data-mode]").forEach(b => b.addEventListener("click", () => { matchMode = b.dataset.mode; showAll = false; $$(".seg [data-mode]").forEach(x => x.setAttribute("aria-selected", x === b)); renderMatches(); }));
+$("#teamFilter").addEventListener("change", () => { showAll = false; renderMatches(); });
+$("#moreRow").addEventListener("click", e => { if (e.target.id === "moreBtn"){ showAll = !showAll; renderMatches(); } });
+renderMatches();
+
+/* ---------- Classements ---------- */
+const RANKED = CATS.map(mainTeam).filter(t => t && !t.coupe && t.classement.length > 1);
+let rankId = RANKED[0]?.id;
+function renderRank(){
+  if (!RANKED.length){ $("#classement").remove(); $$('a[href="#classement"]').forEach(a => a.parentElement?.tagName === "LI" ? a.parentElement.remove() : a.remove()); return; }
+  $("#rankTabs").innerHTML = RANKED.map(t => `<button role="tab" aria-selected="${t.id===rankId}" data-id="${t.id}">${esc(t.categorie)}</button>`).join("");
+  const t = TEAMS[rankId];
+  const notStarted = t.classement.every(c => !c.joue);
+  $("#rankCard").innerHTML = `
+    <div class="rank-head"><b>${esc(compLabel(t))}</b><span>${esc(phaseLabel(t))}${notStarted ? " · la phase n'a pas encore commencé" : ""} · <a href="${esc(t.url)}" target="_blank" rel="noopener">voir sur ffhandball.fr</a></span></div>
+    <div class="table-wrap"><table class="rank"><thead><tr><th>#</th><th>Équipe</th><th>Pts</th><th>J</th><th>G</th><th>N</th><th>P</th><th>BP</th><th>BC</th><th>Diff</th></tr></thead><tbody>
+    ${t.classement.map(c => `<tr class="${c.nous ? "us" : ""}"><td><span class="pos">${c.place}</span></td>
+      <td class="tm">${crest(c.equipe, c.nous ? DATA.meta.clubLogo : c.logo, c.nous)}<span>${esc(c.equipe)}</span></td>
+      <td class="pts">${c.points}</td><td>${c.joue}</td><td>${c.gagne}</td><td>${c.nul}</td><td>${c.perdu}</td><td>${c.bp}</td><td>${c.bc}</td>
+      <td style="color:${c.diff>0?"var(--win)":c.diff<0?"var(--loss)":"inherit"};font-weight:600">${c.diff>0?"+":""}${c.diff}</td></tr>`).join("")}
+    </tbody></table></div>`;
+}
+$("#rankTabs").addEventListener("click", e => { const b = e.target.closest("[data-id]"); if (!b) return; rankId = b.dataset.id; renderRank(); });
+renderRank();
+
+/* ---------- Équipes ---------- */
+(function renderTeams(){
+  const now = Date.now();
+  const cards = CATS.map(cat => {
+    const t = mainTeam(cat);
+    const ms = MATCHS.filter(m => m.t.categorie === cat);
+    const next = ms.filter(m => !isPlayed(m) && m.d && m.d.getTime() > now).sort((a,b) => a.d - b.d)[0];
+    const last = ms.filter(isPlayed).sort((a,b) => (b.d||0) - (a.d||0))[0];
+    const comps = [...new Set(DATA.equipes.filter(e => e.categorie === cat).map(compLabel))];
+    const n = t.classement.length;
+    const started = t.classement.some(c => c.joue);
+    const train = CLUB.entrainements[cat];
+    return `<article class="card team-card">
+      <span class="lvl">${esc(t.niveau)}</span>
+      <div><h3>${esc(cat)}</h3><div class="off">${esc(t.nom)}</div></div>
+      ${t.rang && started ? `<div class="rk"><b>${t.rang}<sup>${t.rang===1?"er":"e"}</sup></b><span>sur ${n} · ${esc(compLabel(t))}</span></div>` : `<div class="rk"><span>${esc(compLabel(t))}${t.poule && !/UNIQUE|TOUR/i.test(t.poule) ? " · " + esc(cap(t.poule)) : ""}</span></div>`}
+      <ul>
+        ${next ? `<li><small>Prochain match</small>${esc(fmtLong(next.d))} · ${fmtHour(next.d)} — ${next.dom ? "reçoit" : "à"} ${esc(next.adv)}</li>` : ""}
+        ${last ? `<li><small>Dernier résultat</small>${esc({V:"Victoire",D:"Défaite",N:"Nul"}[result(last)])} ${esc(scoreText(last))} ${last.dom ? "contre" : "à"} ${esc(last.adv)}</li>` : ""}
+        ${comps.length > 1 ? `<li><small>Compétitions</small>${esc(comps.join(" · "))}</li>` : ""}
+        ${train ? `<li><small>Entraînements</small>${train.map(esc).join("<br>")}</li>` : ""}
+      </ul>
+      <a class="ext" href="${esc(t.url)}" target="_blank" rel="noopener">Calendrier complet sur ffhandball.fr ↗</a>
+    </article>`;
+  });
+  if (CLUB.pratiques.includes("Baby hand")) cards.push(`<article class="card team-card practice">
+      <span class="lvl">Éveil · sans compétition</span>
+      <div><h3>Baby hand</h3><div class="off">Pour les tout-petits</div></div>
+      <p style="color:var(--muted);font-size:.94rem">Découverte du ballon, de la motricité et du jeu collectif, en douceur. Contactez le club pour les âges et les horaires.</p>
+      <a class="ext" href="#contact" data-nav data-subject="Renseignements / inscription">Demander les horaires →</a>
+    </article>`);
+  $("#teamsGrid").innerHTML = cards.join("");
+})();
+
+/* ---------- Club & contact ---------- */
+$("#facts").innerHTML = [
+  ["Depuis 1967", "Près de 60 ans de handball à Bonsecours."],
+  [`${CLUB.licencies} licenciés`, "Joueurs, dirigeants et bénévoles."],
+  [`${CATS.length} équipes`, "Des moins de 11 ans aux seniors."],
+  ["Pratiques", CLUB.pratiques.join(", ") + "."]
+].map(([b,s]) => `<div class="card fact"><b>${esc(b)}</b><span>${esc(s)}</span></div>`).join("");
+const mapUrl = `https://www.openstreetmap.org/search?query=${encodeURIComponent(CLUB.adresse)}`;
+$("#infoList").innerHTML = [
+  [icons.pin, "Adresse du club", `${esc(CLUB.adresse)}<br><a href="${mapUrl}" target="_blank" rel="noopener">Voir sur la carte ↗</a>`],
+  [icons.mail, "E-mail", `<a href="mailto:${CLUB.email}">${esc(CLUB.email)}</a>`],
+  CLUB.telephone ? [icons.phone, "Téléphone", esc(CLUB.telephone)] : null,
+  [icons.link, "Sur la FFHandball", `<a href="${CLUB.monClubUrl}" target="_blank" rel="noopener">Fiche « Mon Club »</a> · <a href="${CLUB.ffhbRechercheUrl}" target="_blank" rel="noopener">Compétitions</a>`]
+].filter(Boolean).map(([i,t,v]) => `<li><span class="ic">${i}</span><div><b>${t}</b><span>${v}</span></div></li>`).join("");
+
+/* ---------- Instagram : story + dernières publications (intégration officielle Instagram) ---------- */
+(function(){
+  const ig = CLUB.instagram; if (!ig || !ig.compte) { $("#instagram")?.remove(); return; }
+  const prof = `https://www.instagram.com/${ig.compte}/`;
+  $("#instaHandle").textContent = "@" + ig.compte;
+  $("#instaBio").innerHTML = `${esc(ig.bio || "")} <b>#forzabonox</b> 🟡⚫️`;
+  $("#storyLink").href = $("#storyBtn").href = `https://www.instagram.com/stories/${ig.compte}/`;
+  $("#followBtn").href = prof;
+  const posts = $("#posts");
+  posts.innerHTML = (ig.publications || []).map(u => `<div class="post">
+      <blockquote class="instagram-media" data-instgrm-permalink="${esc(u)}?utm_source=ig_embed" data-instgrm-version="14">
+        <a class="post-fallback" href="${esc(u)}" target="_blank" rel="noopener"><span>📸<b>Voir la publication</b>sur Instagram</span></a>
+      </blockquote></div>`).join("") +
+    `<div class="post"><a class="post-fallback" href="${prof}" target="_blank" rel="noopener"><span>🟡⚫️<b>Toutes les publications</b>@${esc(ig.compte)}</span></a></div>`;
+  $$(".posts-nav button").forEach(b => b.addEventListener("click", () => posts.scrollBy({left: b.dataset.dir * 360, behavior: "smooth"})));
+  // Le script d'Instagram n'est chargé que quand la section approche de l'écran.
+  const load = () => { if (window.instgrm) { window.instgrm.Embeds.process(); return; }
+    const sc = document.createElement("script"); sc.async = true; sc.src = "https://www.instagram.com/embed.js"; document.body.appendChild(sc); };
+  const ob = new IntersectionObserver(es => { if (es.some(e => e.isIntersecting)) { load(); ob.disconnect(); } }, {rootMargin: "400px"});
+  ob.observe($("#instagram"));
+})();
+
+/* ---------- Navigation ---------- */
+const nav = $("#nav"), burger = $("#burger");
+burger.addEventListener("click", () => { const o = nav.classList.toggle("open"); burger.setAttribute("aria-expanded", o); });
+document.addEventListener("click", e => {
+  const a = e.target.closest("a[data-nav]"); if (!a) return;
+  const target = document.getElementById(a.getAttribute("href").slice(1)); if (!target) return;
+  e.preventDefault(); nav.classList.remove("open"); burger.setAttribute("aria-expanded", "false");
+  if (a.dataset.subject) $("#contactSubject").value = a.dataset.subject;
+  target.scrollIntoView({behavior: matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth"});
+});
+const io = new IntersectionObserver(es => es.forEach(en => { if (en.isIntersecting) $$("nav.main a").forEach(a => a.classList.toggle("active", a.getAttribute("href") === "#" + en.target.id)); }), {rootMargin:"-45% 0px -50% 0px"});
+$$("main section[id]").forEach(s => io.observe(s));
+
+/* ---------- Modale & mentions légales ---------- */
+const modal = $("#modal");
+function openModal(html){ $("#modalBody").innerHTML = html; modal.classList.add("open"); document.body.style.overflow = "hidden"; $(".close", modal).focus(); }
+function closeModal(){ modal.classList.remove("open"); document.body.style.overflow = ""; }
+modal.addEventListener("click", e => { if (e.target === modal || e.target.closest(".close")) closeModal(); });
+document.addEventListener("keydown", e => { if (e.key === "Escape") closeModal(); });
+$("#legalLink").addEventListener("click", e => { e.preventDefault(); openModal(`<h3 id="modalTitle">Mentions légales</h3>
+  <p><b>Éditeur :</b> ${esc(CLUB.nom)}, association — ${esc(CLUB.adresse)}. Contact : ${esc(CLUB.email)}.</p>
+  <p><b>Responsable de la publication :</b> ${esc(CLUB.editeur)}.</p>
+  <p><b>Hébergement :</b> ${esc(CLUB.hebergeur)}.</p>
+  <p><b>Données sportives :</b> calendriers, résultats, classements et logos proviennent du site de la Fédération française de handball (ffhandball.fr) et sont mis à jour automatiquement. En cas d'écart, les informations de la FFHandball font foi.</p>
+  <p><b>Données personnelles :</b> les formulaires n'envoient rien à un serveur : ils préparent un message que vous envoyez vous-même depuis votre messagerie. Le club utilise les informations reçues uniquement pour répondre à votre demande. La page charge des polices (Google Fonts) et des logos hébergés par la FFHandball.</p>`); });
+
+/* ---------- Toast ---------- */
+function toast(msg){ const t = $("#toast"); t.textContent = msg; t.classList.add("show"); clearTimeout(toast.t); toast.t = setTimeout(() => t.classList.remove("show"), 2600); }
+
+/* ---------- Catégorie indicative ----------
+   Année de référence FFHandball : l'année civile du début de la saison (2026 pour 2026-2027).
+   Ex. 2026-2027 : -11 = nés en 2016-2017, -13 = 2014-2015, -15 = 2012-2013, -17 = 2010-2011. */
+function categorie(dateStr){
+  if (!dateStr) return "";
+  const start = parseInt((DATA.meta.saison || "2026-2027").split("-")[0]);
+  const age = start - new Date(dateStr).getFullYear();
+  if (age <= 6) return "Baby hand"; if (age <= 8) return "-9 ans"; if (age <= 10) return "-11 ans";
+  if (age <= 12) return "-13 ans"; if (age <= 14) return "-15 ans"; if (age <= 16) return "-17 ans"; return "Seniors (+16 ans)";
+}
+$("#regForm [name=naissance]").addEventListener("change", e => { $("#regForm [name=categorie]").value = categorie(e.target.value); });
+
+/* ---------- Formulaires : préparent un e-mail (aucun serveur nécessaire) ---------- */
+function validate(form){
+  let ok = true;
+  $$("[required]", form).forEach(f => {
+    const err = f.type === "checkbox" ? $("#rgpdErr") : f.parentElement.querySelector(".err");
+    let msg = "";
+    if (f.type === "checkbox" ? !f.checked : !f.value.trim()) msg = f.type === "checkbox" ? "Merci de cocher cette case." : "Champ requis.";
+    else if (f.type === "email" && !/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(f.value)) msg = "Adresse e-mail invalide.";
+    else if (f.type === "tel" && f.value.replace(/\D/g, "").length < 10) msg = "Numéro incomplet.";
+    if (err) err.textContent = msg;
+    if (msg) ok = false;
+  });
+  return ok;
+}
+function showRecap(box, subject, text){
+  const mailto = `mailto:${CLUB.email}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(text)}`;
+  box.innerHTML = `<p><b>Votre message est prêt.</b> Ouvrez-le dans votre messagerie, ou copiez-le et envoyez-le à <b>${esc(CLUB.email)}</b>.</p>
+    <pre>${esc(text)}</pre>
+    <div style="display:flex;gap:10px;flex-wrap:wrap"><a class="btn btn-dark btn-sm" href="${mailto}">Ouvrir ma messagerie</a><button type="button" class="btn btn-gold btn-sm" data-copy>Copier le texte</button></div>`;
+  box.classList.add("show");
+  $("[data-copy]", box).addEventListener("click", async () => {
+    try { await navigator.clipboard.writeText(text); toast("Texte copié ✔"); }
+    catch { const r = document.createRange(); r.selectNodeContents($("pre", box)); const s = getSelection(); s.removeAllRanges(); s.addRange(r); toast("Sélectionnez puis copiez (Ctrl+C)"); }
+  });
+}
+$("#regForm").addEventListener("submit", e => {
+  e.preventDefault(); const f = e.target; if (!validate(f)) return;
+  const v = Object.fromEntries(new FormData(f));
+  showRecap($("#regRecap"), `Inscription ${v.prenom} ${v.nom}`,
+    `DEMANDE DE RENSEIGNEMENTS — INSCRIPTION ${DATA.meta.saison || ""}\n\nJoueur/joueuse : ${v.prenom} ${v.nom}\nDate de naissance : ${new Date(v.naissance).toLocaleDateString("fr-FR")}\nCatégorie (indicative) : ${v.categorie || categorie(v.naissance)}\nPratique : ${v.pratique}\nE-mail : ${v.email}\nTéléphone : ${v.tel}\n\nMessage : ${v.message || "—"}`);
+});
+$("#contactForm").addEventListener("submit", e => {
+  e.preventDefault(); const f = e.target; if (!validate(f)) return;
+  const v = Object.fromEntries(new FormData(f));
+  showRecap($("#contactRecap"), `[Site] ${v.objet}`, `${v.objet.toUpperCase()}\n\nDe : ${v.nom} <${v.email}>\n\n${v.message}`);
+});
+</script>
+</body>
+</html>

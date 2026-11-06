@@ -1,0 +1,64 @@
+# Met à jour les matchs depuis ffhandball.fr puis publie le site sur GitHub Pages
+# (adresse : https://hand.decatoire.fr).
+# Tourne toutes les 3 heures, à chaque modification du dépôt, et à la demande
+# (onglet Actions > « Site du club » > Run workflow).
+name: Site du club
+
+on:
+  schedule:
+    - cron: '23 */3 * * *'   # toutes les 3 h (heure UTC)
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+concurrency:
+  group: site
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: Tests de la synchro
+        run: node --test sync/ffhb-core.test.mjs
+
+      - name: Synchro ffhandball.fr
+        # Si la FFHB est en panne, on publie quand même le site avec les dernières données.
+        continue-on-error: true
+        run: node sync/sync.mjs
+
+      - name: Enregistrer les nouvelles données
+        run: |
+          if ! git diff --quiet -- site/data; then
+            git config user.name "github-actions[bot]"
+            git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+            git add site/data
+            git commit -m "Matchs et classements mis à jour depuis ffhandball.fr"
+            git push
+          fi
+
+      - uses: actions/configure-pages@v5
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: site
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4

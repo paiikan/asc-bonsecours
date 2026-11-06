@@ -1,0 +1,20 @@
+{
+ "_info": "Compétitions du club, utilisées si la recherche « Club » de ffhandball.fr ne répond pas (c'est le cas depuis les serveurs GitHub). À mettre à jour à chaque nouvelle saison : voir le README.",
+ "saison": 22,
+ "clubLogo": "2024-08-21-58a11b0c-1d13-4285-a9f6-899cae5a14e2",
+ "competitions": [
+  {"id": "33487", "libelle": "-13 MASCULINS COUPE 76", "type": "departemental", "organisateur": "COMITE DE SEINE MARITIME"},
+  {"id": "32851", "libelle": "+16 COUPE MASCULINS 76", "type": "departemental", "organisateur": "COMITE DE SEINE MARITIME"},
+  {"id": "32716", "libelle": "+16 MASCULIN COUPE DE NORMANDIE", "type": "regional", "organisateur": "LIGUE DE NORMANDIE"},
+  {"id": "33486", "libelle": "-15 MASCULINS COUPE 76", "type": "departemental", "organisateur": "COMITE DE SEINE MARITIME"},
+  {"id": "33488", "libelle": "-11 MASCULINS COUPE 76", "type": "departemental", "organisateur": "COMITE DE SEINE MARITIME"},
+  {"id": "33077", "libelle": "-11 MASCULINS CHAMPIONNAT 76", "type": "departemental", "organisateur": "COMITE DE SEINE MARITIME"},
+  {"id": "32964", "libelle": "-15 MASCULINS CHAMPIONNAT 76", "type": "departemental", "organisateur": "COMITE DE SEINE MARITIME"},
+  {"id": "32965", "libelle": "-13 MASCULINS CHAMPIONNAT 76", "type": "departemental", "organisateur": "COMITE DE SEINE MARITIME"},
+  {"id": "33484", "libelle": "-17 MASCULINS COUPE 76", "type": "departemental", "organisateur": "COMITE DE SEINE MARITIME"},
+  {"id": "32853", "libelle": "+16 1ERE DIV MASCULINE 76", "type": "departemental", "organisateur": "COMITE DE SEINE MARITIME"},
+  {"id": "32322", "libelle": "+16ANS MASCULIN HONNEUR", "type": "regional", "organisateur": "LIGUE DE NORMANDIE"},
+  {"id": "32662", "libelle": "COUPE DE FRANCE CAISSE D'EPARGNE REGIONALE MASCULINE 2026-2027", "type": "coupe-de-france", "organisateur": "FEDERATION FRANCAISE DE HANDBALL"},
+  {"id": "32963", "libelle": "-17 MASCULINS CHAMPIONNAT 76", "type": "departemental", "organisateur": "COMITE DE SEINE MARITIME"}
+ ]
+}
