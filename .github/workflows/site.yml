@@ -1,5 +1,7 @@
-# Met à jour les matchs depuis ffhandball.fr puis publie le site sur GitHub Pages
-# (adresse : https://hand.decatoire.fr).
+# Met à jour les matchs depuis ffhandball.fr puis publie le site à deux endroits :
+#  - IONOS (adresse principale https://hand.decatoire.fr), par SFTP ;
+#  - GitHub Pages (copie de secours https://paiikan.github.io/asc-bonsecours/).
+# Les deux envois sont indépendants : si l'un échoue, l'autre est quand même publié.
 # Tourne toutes les 3 heures, à chaque modification du dépôt, et à la demande
 # (onglet Actions > « Site du club » > Run workflow).
 name: Site du club
@@ -19,6 +21,13 @@ permissions:
 concurrency:
   group: site
   cancel-in-progress: false
+
+env:
+  SFTP_HOST: access816898743.webspace-data.io
+  # Accès SFTP dédié au site : il ne voit que le dossier /asc-bonsecours de l'espace web
+  # (dossier du sous-domaine hand.decatoire.fr), qui est donc sa racine.
+  SFTP_USER: acc295848465
+  SFTP_DIR: .
 
 jobs:
   build:
@@ -53,6 +62,13 @@ jobs:
         with:
           path: site
 
+      # Le site à jour (données comprises), pour l'envoi IONOS.
+      - uses: actions/upload-artifact@v4
+        with:
+          name: site
+          path: site
+          retention-days: 1
+
   deploy:
     needs: build
     runs-on: ubuntu-latest
@@ -62,3 +78,42 @@ jobs:
     steps:
       - id: deployment
         uses: actions/deploy-pages@v4
+
+  ionos:
+    needs: build
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/download-artifact@v4
+        with:
+          name: site
+          path: site
+
+      - name: Envoi sur IONOS (SFTP)
+        env:
+          SSHPASS: ${{ secrets.IONOS_SFTP_PASSWORD }}
+        run: |
+          if [ -z "$SSHPASS" ]; then
+            echo "::error::Secret IONOS_SFTP_PASSWORD manquant (Settings > Secrets and variables > Actions)."
+            exit 1
+          fi
+          # Un retour à la ligne collé avec le mot de passe ferait échouer la connexion.
+          export SSHPASS="$(printf '%s' "$SSHPASS" | tr -d '\r\n')"
+          sudo apt-get update -qq && sudo apt-get install -y -qq sshpass > /dev/null
+          cd site
+          {
+            find . -mindepth 1 -type d | sed 's|^\./||' | sort | while read -r d; do echo "-mkdir $SFTP_DIR/$d"; done
+            find . -type f | sed 's|^\./||' | sort | while read -r f; do echo "put \"$f\" \"$SFTP_DIR/$f\""; done
+          } > ../sftp-batch.txt
+          cat ../sftp-batch.txt
+          set +e
+          sshpass -e sftp -o BatchMode=no -b ../sftp-batch.txt \
+            -o StrictHostKeyChecking=accept-new -o PubkeyAuthentication=no \
+            -o PreferredAuthentications=password,keyboard-interactive \
+            "$SFTP_USER@$SFTP_HOST"
+          code=$?
+          case $code in
+            0) echo "✓ Site envoyé sur IONOS." ;;
+            5) echo "::error::IONOS refuse le mot de passe de $SFTP_USER : vérifiez le secret IONOS_SFTP_PASSWORD." ;;
+            *) echo "::error::Échec de l'envoi SFTP (code $code)." ;;
+          esac
+          exit $code

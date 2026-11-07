@@ -17,16 +17,26 @@ Pour voir le site sur votre ordinateur, ouvrez `site/index.html` dans un navigat
 
 ## Mise en ligne
 
-Le site est publié par **GitHub Pages** à l'adresse **https://hand.decatoire.fr**
-(maquette pour le bureau du club). Chez IONOS, le sous-domaine `hand.decatoire.fr`
-pointe vers GitHub par un enregistrement DNS `CNAME` → `paiikan.github.io`.
+Le site est publié à deux endroits à chaque mise à jour :
 
-La tâche GitHub `.github/workflows/site.yml` fait tout :
-1. elle récupère les données sur ffhandball.fr (toutes les 3 h) ;
-2. s'il y a du nouveau, elle enregistre `site/data/` dans le dépôt ;
-3. elle publie le dossier `site/` sur GitHub Pages.
+| Rôle | Adresse | Hébergement |
+|---|---|---|
+| Principal | https://hand.decatoire.fr | IONOS, dossier `/asc-bonsecours` de l'espace web, envoi SFTP avec l'accès dédié `acc295848465` |
+| Secours | https://paiikan.github.io/asc-bonsecours/ | GitHub Pages |
 
-Aucun mot de passe n'est nécessaire.
+La tâche GitHub `.github/workflows/site.yml` :
+1. récupère les données sur ffhandball.fr (toutes les 3 h) ;
+2. enregistre `site/data/` dans le dépôt s'il y a du nouveau ;
+3. publie `site/` sur GitHub Pages **et** sur IONOS, en parallèle (l'un peut échouer
+   sans bloquer l'autre).
+
+Réglage nécessaire : secret `IONOS_SFTP_PASSWORD` (Settings → Secrets and variables →
+Actions) = mot de passe de l'accès SFTP `acc295848465`.
+
+Pour basculer l'adresse principale sur GitHub en cas de panne IONOS : chez IONOS,
+remplacer l'utilisation de `hand.decatoire.fr` par un enregistrement DNS `CNAME`
+→ `paiikan.github.io`, puis déclarer `hand.decatoire.fr` comme « Custom domain »
+dans Settings → Pages.
 
 **Maquette non indexée** : la page contient une balise `<meta name="robots" content="noindex…">`
 pour que les moteurs de recherche ne la référencent pas. À retirer de `site/index.html`
@@ -62,8 +72,8 @@ ffhandball.fr.
 - **GitHub met en pause les tâches planifiées après 60 jours sans activité dans
   le dépôt** (par exemple pendant l'été). Pour les relancer : Actions → Site du
   club → Enable workflow.
-- **Le site affiche une erreur de certificat** : Settings → Pages → vérifier que
-  « Custom domain » vaut `hand.decatoire.fr` et que « Enforce HTTPS » est coché.
+- **Erreur « IONOS refuse le mot de passe »** : le mot de passe SFTP a changé ;
+  mettre à jour le secret `IONOS_SFTP_PASSWORD`. La copie GitHub Pages reste à jour.
 
 ## Comment ça marche (pour les curieux)
 
