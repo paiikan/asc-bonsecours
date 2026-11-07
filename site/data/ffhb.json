@@ -6,7 +6,7 @@
   "clubLogo": "2024-08-21-58a11b0c-1d13-4285-a9f6-899cae5a14e2",
   "equipes": 16,
   "matchs": 93,
-  "majSite": "2026-11-07T10:27:24.667Z"
+  "majSite": "2026-11-07T17:47:24.126Z"
  },
  "equipes": [
   {
@@ -137,7 +137,7 @@
    "coupe": false,
    "phase": "-11 MASCULINS CHAMPIONNAT 76 - PHASE 1 - BRASSAGE DEBUTANT",
    "poule": "POULE 8",
-   "majFFHB": "2026-11-07 08:31:04.000",
+   "majFFHB": "2026-11-07 17:05:20.000",
    "url": "https://www.ffhandball.fr/competitions/saison-2026-2027-22/departemental/11-masculins-championnat-76-33077/equipe-2216717/",
    "rang": 3,
    "classement": [
@@ -224,7 +224,7 @@
    "coupe": false,
    "phase": "-15 MASCULINS CHAMPIONNAT 76 - PHASE 1 - BRASSAGE",
    "poule": "POULE 6",
-   "majFFHB": "2026-11-07 08:30:10.000",
+   "majFFHB": "2026-11-07 16:26:16.000",
    "url": "https://www.ffhandball.fr/competitions/saison-2026-2027-22/departemental/15-masculins-championnat-76-32964/equipe-2217046/",
    "rang": 1,
    "classement": [
@@ -311,7 +311,7 @@
    "coupe": false,
    "phase": "-13 MASCULINS CHAMPIONNAT 76 - PHASE 1 - BRASSAGE CONFIRME",
    "poule": "POULE 3",
-   "majFFHB": "2026-11-06 03:36:02.000",
+   "majFFHB": "2026-11-07 17:42:20.000",
    "url": "https://www.ffhandball.fr/competitions/saison-2026-2027-22/departemental/13-masculins-championnat-76-32965/equipe-2216791/",
    "rang": 3,
    "classement": [
@@ -568,7 +568,7 @@
    "coupe": false,
    "phase": "+16ANS MASCULIN HONNEUR",
    "poule": "POULE C",
-   "majFFHB": "2026-11-07 06:52:35.000",
+   "majFFHB": "2026-11-07 17:22:31.000",
    "url": "https://www.ffhandball.fr/competitions/saison-2026-2027-22/regional/16ans-masculin-honneur-32322/equipe-2118211/",
    "rang": 4,
    "classement": [
@@ -752,7 +752,7 @@
    "coupe": true,
    "phase": "CDF REG MAS (2° TOUR)",
    "poule": "2° TOUR",
-   "majFFHB": "2026-11-06 21:29:37.000",
+   "majFFHB": "2026-11-07 15:07:30.000",
    "url": "https://www.ffhandball.fr/competitions/saison-2026-2027-22/coupe-de-france/coupe-de-france-caisse-d-epargne-regionale-masculine-2026-2027-32662/equipe-2220592/",
    "rang": null,
    "classement": []
@@ -767,7 +767,7 @@
    "coupe": false,
    "phase": "-17 MASCULINS CHAMPIONNAT 76 - PHASE 1 - BRASSAGE",
    "poule": "POULE UNIQUE",
-   "majFFHB": "2026-11-06 10:40:44.000",
+   "majFFHB": "2026-11-07 17:38:11.000",
    "url": "https://www.ffhandball.fr/competitions/saison-2026-2027-22/departemental/17-masculins-championnat-76-32963/equipe-2217122/",
    "rang": 1,
    "classement": [
@@ -1274,7 +1274,10 @@
    "dom": false,
    "adv": "AS GOURNAY PAYS DE BRAY HB 2",
    "advLogo": "2023-04-13-61d0fd9a-a190-47b1-a4eb-29b9b5d47bea",
-   "score": null,
+   "score": [
+    32,
+    25
+   ],
    "forfait": null
   },
   {
