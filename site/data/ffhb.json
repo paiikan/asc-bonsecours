@@ -6,7 +6,7 @@
   "clubLogo": "2024-08-21-58a11b0c-1d13-4285-a9f6-899cae5a14e2",
   "equipes": 16,
   "matchs": 93,
-  "majSite": "2026-11-06T19:32:41.319Z"
+  "majSite": "2026-11-07T00:59:15.964Z"
  },
  "equipes": [
   {
@@ -137,7 +137,7 @@
    "coupe": false,
    "phase": "-11 MASCULINS CHAMPIONNAT 76 - PHASE 1 - BRASSAGE DEBUTANT",
    "poule": "POULE 8",
-   "majFFHB": "2026-11-06 15:35:50.000",
+   "majFFHB": "2026-11-06 23:09:39.000",
    "url": "https://www.ffhandball.fr/competitions/saison-2026-2027-22/departemental/11-masculins-championnat-76-33077/equipe-2216717/",
    "rang": 3,
    "classement": [
@@ -568,7 +568,7 @@
    "coupe": false,
    "phase": "+16ANS MASCULIN HONNEUR",
    "poule": "POULE C",
-   "majFFHB": "2026-11-06 09:51:12.000",
+   "majFFHB": "2026-11-06 23:11:44.000",
    "url": "https://www.ffhandball.fr/competitions/saison-2026-2027-22/regional/16ans-masculin-honneur-32322/equipe-2118211/",
    "rang": 4,
    "classement": [
@@ -752,7 +752,7 @@
    "coupe": true,
    "phase": "CDF REG MAS (2° TOUR)",
    "poule": "2° TOUR",
-   "majFFHB": "2026-11-06 15:56:53.000",
+   "majFFHB": "2026-11-06 21:29:37.000",
    "url": "https://www.ffhandball.fr/competitions/saison-2026-2027-22/coupe-de-france/coupe-de-france-caisse-d-epargne-regionale-masculine-2026-2027-32662/equipe-2220592/",
    "rang": null,
    "classement": []
@@ -1531,6 +1531,17 @@
    "forfait": null
   },
   {
+   "id": "2622839",
+   "equipe": "2118211",
+   "journee": 9,
+   "date": "2026-12-12T21:00:00+01:00",
+   "dom": false,
+   "adv": "A MALAUNAY/LE HOULME HB",
+   "advLogo": "2025-01-06-013f856f-816b-49de-829c-366af741d914",
+   "score": null,
+   "forfait": null
+  },
+  {
    "id": "2757147",
    "equipe": "2217046",
    "journee": 6,
@@ -1651,17 +1662,6 @@
    "dom": true,
    "adv": "MONTVILLE HB",
    "advLogo": "2023-02-26-3f9113b4-9f9d-44b4-9063-e8ec9d1b2716",
-   "score": null,
-   "forfait": null
-  },
-  {
-   "id": "2622839",
-   "equipe": "2118211",
-   "journee": 9,
-   "date": null,
-   "dom": false,
-   "adv": "A MALAUNAY/LE HOULME HB",
-   "advLogo": "2025-01-06-013f856f-816b-49de-829c-366af741d914",
    "score": null,
    "forfait": null
   },
