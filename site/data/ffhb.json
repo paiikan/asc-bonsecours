@@ -6,7 +6,7 @@
   "clubLogo": "2024-08-21-58a11b0c-1d13-4285-a9f6-899cae5a14e2",
   "equipes": 16,
   "matchs": 93,
-  "majSite": "2026-11-09T22:30:56.131Z"
+  "majSite": "2026-11-10T17:09:22.174Z"
  },
  "equipes": [
   {
@@ -136,8 +136,8 @@
    "organisateur": "COMITE DE SEINE MARITIME",
    "coupe": false,
    "phase": "-11 MASCULINS CHAMPIONNAT 76 - PHASE 1 - BRASSAGE DEBUTANT",
-   "poule": "POULE 8",
-   "majFFHB": "2026-11-09 12:31:07.000",
+   "poule": "POULE 7",
+   "majFFHB": "2026-11-10 14:44:17.000",
    "url": "https://www.ffhandball.fr/competitions/saison-2026-2027-22/departemental/11-masculins-championnat-76-33077/equipe-2216717/",
    "rang": 1,
    "classement": [
@@ -311,7 +311,7 @@
    "coupe": false,
    "phase": "-13 MASCULINS CHAMPIONNAT 76 - PHASE 1 - BRASSAGE CONFIRME",
    "poule": "POULE 3",
-   "majFFHB": "2026-11-09 18:23:28.000",
+   "majFFHB": "2026-11-10 09:24:17.000",
    "url": "https://www.ffhandball.fr/competitions/saison-2026-2027-22/departemental/13-masculins-championnat-76-32965/equipe-2216791/",
    "rang": 1,
    "classement": [
@@ -568,7 +568,7 @@
    "coupe": false,
    "phase": "+16ANS MASCULIN HONNEUR",
    "poule": "POULE C",
-   "majFFHB": "2026-11-09 06:53:09.000",
+   "majFFHB": "2026-11-10 16:56:12.000",
    "url": "https://www.ffhandball.fr/competitions/saison-2026-2027-22/regional/16ans-masculin-honneur-32322/equipe-2118211/",
    "rang": 2,
    "classement": [
@@ -616,6 +616,20 @@
     },
     {
      "place": 4,
+     "equipe": "BRIONNE HB",
+     "points": 12,
+     "joue": 5,
+     "gagne": 3,
+     "nul": 1,
+     "perdu": 1,
+     "bp": 148,
+     "bc": 139,
+     "diff": 9,
+     "logo": "2022-06-09-a89e51a6-938f-489a-9dce-61e11554a95c",
+     "nous": false
+    },
+    {
+     "place": 5,
      "equipe": "DEVILLE MAROMME HB 2",
      "points": 11,
      "joue": 5,
@@ -629,7 +643,7 @@
      "nous": false
     },
     {
-     "place": 5,
+     "place": 6,
      "equipe": "AL BUQUET-ELBEUF HB",
      "points": 10,
      "joue": 5,
@@ -640,20 +654,6 @@
      "bc": 144,
      "diff": 5,
      "logo": "2024-04-02-4adeef42-58c2-4f83-95d3-e59899b020f5",
-     "nous": false
-    },
-    {
-     "place": 6,
-     "equipe": "BRIONNE HB",
-     "points": 9,
-     "joue": 4,
-     "gagne": 2,
-     "nul": 1,
-     "perdu": 1,
-     "bp": 116,
-     "bc": 110,
-     "diff": 6,
-     "logo": "2022-06-09-a89e51a6-938f-489a-9dce-61e11554a95c",
      "nous": false
     },
     {
@@ -729,14 +729,14 @@
     {
      "place": 12,
      "equipe": "US GRAVIGNY MISEREY SPORTS HB",
-     "points": 0,
-     "joue": 4,
+     "points": 1,
+     "joue": 5,
      "gagne": 1,
      "nul": 0,
-     "perdu": 3,
-     "bp": 103,
-     "bc": 110,
-     "diff": -7,
+     "perdu": 4,
+     "bp": 132,
+     "bc": 142,
+     "diff": -10,
      "logo": "2025-04-21-8fdf6a0c-0090-4cc5-8bde-2effb4909239",
      "nous": false
     }
@@ -752,7 +752,7 @@
    "coupe": true,
    "phase": "CDF REG MAS (2° TOUR)",
    "poule": "2° TOUR",
-   "majFFHB": "2026-11-09 21:52:31.000",
+   "majFFHB": "2026-11-10 17:08:52.000",
    "url": "https://www.ffhandball.fr/competitions/saison-2026-2027-22/coupe-de-france/coupe-de-france-caisse-d-epargne-regionale-masculine-2026-2027-32662/equipe-2220592/",
    "rang": null,
    "classement": []
@@ -767,7 +767,7 @@
    "coupe": false,
    "phase": "-17 MASCULINS CHAMPIONNAT 76 - PHASE 1 - BRASSAGE",
    "poule": "POULE UNIQUE",
-   "majFFHB": "2026-11-09 19:46:05.000",
+   "majFFHB": "2026-11-10 14:47:31.000",
    "url": "https://www.ffhandball.fr/competitions/saison-2026-2027-22/departemental/17-masculins-championnat-76-32963/equipe-2217122/",
    "rang": 1,
    "classement": [
@@ -810,7 +810,7 @@
      "bp": 33,
      "bc": 33,
      "diff": 0,
-     "logo": "2020-09-16-febae6f6-8b91-4c57-ab92-cd1119ca5ab0",
+     "logo": "",
      "nous": false
     },
     {
@@ -1585,7 +1585,7 @@
    "date": "2026-12-20T14:00:00+01:00",
    "dom": false,
    "adv": "E MONTIVILLIERS/GONFREVILLE 3",
-   "advLogo": "2020-09-16-febae6f6-8b91-4c57-ab92-cd1119ca5ab0",
+   "advLogo": "",
    "score": null,
    "forfait": null
   },
@@ -1819,7 +1819,7 @@
    "date": null,
    "dom": true,
    "adv": "E MONTIVILLIERS/GONFREVILLE 3",
-   "advLogo": "2020-09-16-febae6f6-8b91-4c57-ab92-cd1119ca5ab0",
+   "advLogo": "",
    "score": null,
    "forfait": null
   },
