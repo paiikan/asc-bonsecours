@@ -6,7 +6,7 @@
   "clubLogo": "2024-08-21-58a11b0c-1d13-4285-a9f6-899cae5a14e2",
   "equipes": 16,
   "matchs": 93,
-  "majSite": "2026-11-11T17:16:39.966Z"
+  "majSite": "2026-11-12T00:51:24.836Z"
  },
  "equipes": [
   {
@@ -137,7 +137,7 @@
    "coupe": false,
    "phase": "-11 MASCULINS CHAMPIONNAT 76 - PHASE 1 - BRASSAGE DEBUTANT",
    "poule": "POULE 7",
-   "majFFHB": "2026-11-11 11:49:14.000",
+   "majFFHB": "2026-11-11 19:32:30.000",
    "url": "https://www.ffhandball.fr/competitions/saison-2026-2027-22/departemental/11-masculins-championnat-76-33077/equipe-2216717/",
    "rang": 1,
    "classement": [
@@ -224,7 +224,7 @@
    "coupe": false,
    "phase": "-15 MASCULINS CHAMPIONNAT 76 - PHASE 1 - BRASSAGE",
    "poule": "POULE 6",
-   "majFFHB": "2026-11-11 09:19:26.000",
+   "majFFHB": "2026-11-11 21:56:39.000",
    "url": "https://www.ffhandball.fr/competitions/saison-2026-2027-22/departemental/15-masculins-championnat-76-32964/equipe-2217046/",
    "rang": 1,
    "classement": [
@@ -568,7 +568,7 @@
    "coupe": false,
    "phase": "+16ANS MASCULIN HONNEUR",
    "poule": "POULE C",
-   "majFFHB": "2026-11-11 11:28:19.000",
+   "majFFHB": "2026-11-11 15:56:15.000",
    "url": "https://www.ffhandball.fr/competitions/saison-2026-2027-22/regional/16ans-masculin-honneur-32322/equipe-2118211/",
    "rang": 2,
    "classement": [
@@ -752,7 +752,7 @@
    "coupe": true,
    "phase": "CDF REG MAS (2° TOUR)",
    "poule": "2° TOUR",
-   "majFFHB": "2026-11-11 15:12:30.000",
+   "majFFHB": "2026-11-11 20:42:31.000",
    "url": "https://www.ffhandball.fr/competitions/saison-2026-2027-22/coupe-de-france/coupe-de-france-caisse-d-epargne-regionale-masculine-2026-2027-32662/equipe-2220592/",
    "rang": null,
    "classement": []
@@ -1458,6 +1458,17 @@
    "forfait": null
   },
   {
+   "id": "2756260",
+   "equipe": "2216717",
+   "journee": 4,
+   "date": "2026-12-05T15:00:00+01:00",
+   "dom": false,
+   "adv": "HBC BELBEUF PLATEAU EST",
+   "advLogo": "2024-06-08-f45b7068-7fc4-4a25-845f-a092eb4f21b5",
+   "score": null,
+   "forfait": null
+  },
+  {
    "id": "2756501",
    "equipe": "2216791",
    "journee": 4,
@@ -1633,17 +1644,6 @@
    "dom": false,
    "adv": "ES AUMALE 2",
    "advLogo": "2024-08-06-5a0e50a5-357f-44d5-8b85-7e73fa0ce160",
-   "score": null,
-   "forfait": null
-  },
-  {
-   "id": "2756260",
-   "equipe": "2216717",
-   "journee": 4,
-   "date": null,
-   "dom": false,
-   "adv": "HBC BELBEUF PLATEAU EST",
-   "advLogo": "2024-06-08-f45b7068-7fc4-4a25-845f-a092eb4f21b5",
    "score": null,
    "forfait": null
   },
