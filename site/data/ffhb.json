@@ -6,7 +6,7 @@
   "clubLogo": "2024-08-21-58a11b0c-1d13-4285-a9f6-899cae5a14e2",
   "equipes": 16,
   "matchs": 93,
-  "majSite": "2026-11-13T11:15:34.728Z"
+  "majSite": "2026-11-13T19:52:41.176Z"
  },
  "equipes": [
   {
@@ -224,7 +224,7 @@
    "coupe": false,
    "phase": "-15 MASCULINS CHAMPIONNAT 76 - PHASE 1 - BRASSAGE",
    "poule": "POULE 6",
-   "majFFHB": "2026-11-12 19:44:41.000",
+   "majFFHB": "2026-11-13 12:19:26.000",
    "url": "https://www.ffhandball.fr/competitions/saison-2026-2027-22/departemental/15-masculins-championnat-76-32964/equipe-2217046/",
    "rang": 1,
    "classement": [
@@ -384,7 +384,7 @@
    "coupe": false,
    "phase": "+16 1ERE DIV MASCULINE 76",
    "poule": "POULE UNIQUE",
-   "majFFHB": "2026-11-12 18:54:03.000",
+   "majFFHB": "2026-11-13 17:39:44.000",
    "url": "https://www.ffhandball.fr/competitions/saison-2026-2027-22/departemental/16-1ere-div-masculine-76-32853/equipe-2168398/",
    "rang": 7,
    "classement": [
@@ -752,7 +752,7 @@
    "coupe": true,
    "phase": "CDF REG MAS (2° TOUR)",
    "poule": "2° TOUR",
-   "majFFHB": "2026-11-13 10:47:31.000",
+   "majFFHB": "2026-11-13 16:17:33.000",
    "url": "https://www.ffhandball.fr/competitions/saison-2026-2027-22/coupe-de-france/coupe-de-france-caisse-d-epargne-regionale-masculine-2026-2027-32662/equipe-2220592/",
    "rang": null,
    "classement": []
@@ -767,26 +767,12 @@
    "coupe": false,
    "phase": "-17 MASCULINS CHAMPIONNAT 76 - PHASE 1 - BRASSAGE",
    "poule": "POULE UNIQUE",
-   "majFFHB": "2026-11-11 11:46:23.000",
+   "majFFHB": "2026-11-13 12:30:58.000",
    "url": "https://www.ffhandball.fr/competitions/saison-2026-2027-22/departemental/17-masculins-championnat-76-32963/equipe-2217122/",
-   "rang": 1,
+   "rang": 5,
    "classement": [
     {
      "place": 1,
-     "equipe": "ASC BONSECOURS",
-     "points": 3,
-     "joue": 1,
-     "gagne": 1,
-     "nul": 0,
-     "perdu": 0,
-     "bp": 20,
-     "bc": 0,
-     "diff": 20,
-     "logo": "2024-08-21-58a11b0c-1d13-4285-a9f6-899cae5a14e2",
-     "nous": true
-    },
-    {
-     "place": 2,
      "equipe": "HBC AUFFAY-TOTES",
      "points": 3,
      "joue": 1,
@@ -800,7 +786,7 @@
      "nous": false
     },
     {
-     "place": 3,
+     "place": 2,
      "equipe": "E MONTIVILLIERS/GONFREVILLE 3",
      "points": 2,
      "joue": 1,
@@ -814,7 +800,7 @@
      "nous": false
     },
     {
-     "place": 4,
+     "place": 3,
      "equipe": "CJ DOUDEVILLE",
      "points": 2,
      "joue": 1,
@@ -828,7 +814,7 @@
      "nous": false
     },
     {
-     "place": 5,
+     "place": 4,
      "equipe": "DEVILLE MAROMME HB 2",
      "points": 1,
      "joue": 1,
@@ -840,6 +826,20 @@
      "diff": -7,
      "logo": "2024-07-08-5c1e1e14-d7a1-4309-ac17-e5f0061d8a51",
      "nous": false
+    },
+    {
+     "place": 5,
+     "equipe": "ASC BONSECOURS",
+     "points": 0,
+     "joue": 0,
+     "gagne": 0,
+     "nul": 0,
+     "perdu": 0,
+     "bp": 0,
+     "bc": 0,
+     "diff": 0,
+     "logo": "2024-08-21-58a11b0c-1d13-4285-a9f6-899cae5a14e2",
+     "nous": true
     },
     {
      "place": 6,
@@ -871,15 +871,15 @@
     },
     {
      "place": 8,
-     "equipe": "MONTVILLE HB",
+     "equipe": "MONTVILLE HB (FG)",
      "points": 0,
-     "joue": 1,
+     "joue": 0,
      "gagne": 0,
      "nul": 0,
-     "perdu": 1,
+     "perdu": 0,
      "bp": 0,
-     "bc": 20,
-     "diff": -20,
+     "bc": 0,
+     "diff": 0,
      "logo": "2023-02-26-3f9113b4-9f9d-44b4-9063-e8ec9d1b2716",
      "nous": false
     }
@@ -1628,7 +1628,7 @@
    "journee": 1,
    "date": null,
    "dom": false,
-   "adv": "MONTVILLE HB",
+   "adv": "MONTVILLE HB (FG)",
    "advLogo": "2023-02-26-3f9113b4-9f9d-44b4-9063-e8ec9d1b2716",
    "score": null,
    "forfait": {
@@ -1675,7 +1675,7 @@
    "journee": 8,
    "date": null,
    "dom": true,
-   "adv": "MONTVILLE HB",
+   "adv": "MONTVILLE HB (FG)",
    "advLogo": "2023-02-26-3f9113b4-9f9d-44b4-9063-e8ec9d1b2716",
    "score": null,
    "forfait": null
