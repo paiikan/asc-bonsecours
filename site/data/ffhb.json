@@ -6,7 +6,7 @@
   "clubLogo": "2024-08-21-58a11b0c-1d13-4285-a9f6-899cae5a14e2",
   "equipes": 16,
   "matchs": 91,
-  "majSite": "2026-11-14T10:40:42.665Z"
+  "majSite": "2026-11-14T18:17:47.919Z"
  },
  "equipes": [
   {
@@ -137,12 +137,40 @@
    "coupe": false,
    "phase": "-11 MASCULINS CHAMPIONNAT 76 - PHASE 1 - BRASSAGE DEBUTANT",
    "poule": "POULE 7",
-   "majFFHB": "2026-11-11 19:32:30.000",
+   "majFFHB": "2026-11-14 15:36:41.000",
    "url": "https://www.ffhandball.fr/competitions/saison-2026-2027-22/departemental/11-masculins-championnat-76-33077/equipe-2216717/",
-   "rang": 1,
+   "rang": 3,
    "classement": [
     {
      "place": 1,
+     "equipe": "HBC BELBEUF PLATEAU EST",
+     "points": 4,
+     "joue": 2,
+     "gagne": 1,
+     "nul": 0,
+     "perdu": 1,
+     "bp": 29,
+     "bc": 39,
+     "diff": -10,
+     "logo": "2024-06-08-f45b7068-7fc4-4a25-845f-a092eb4f21b5",
+     "nous": false
+    },
+    {
+     "place": 2,
+     "equipe": "DEVILLE MAROMME HB 1",
+     "points": 4,
+     "joue": 2,
+     "gagne": 1,
+     "nul": 0,
+     "perdu": 1,
+     "bp": 35,
+     "bc": 34,
+     "diff": 1,
+     "logo": "2024-07-08-5c1e1e14-d7a1-4309-ac17-e5f0061d8a51",
+     "nous": false
+    },
+    {
+     "place": 3,
      "equipe": "ASC BONSECOURS",
      "points": 3,
      "joue": 1,
@@ -156,45 +184,17 @@
      "nous": true
     },
     {
-     "place": 2,
-     "equipe": "HBC BELBEUF PLATEAU EST",
+     "place": 4,
+     "equipe": "GCO BIHOREL 3",
      "points": 1,
      "joue": 1,
      "gagne": 0,
      "nul": 0,
      "perdu": 1,
-     "bp": 7,
-     "bc": 28,
-     "diff": -21,
-     "logo": "2024-06-08-f45b7068-7fc4-4a25-845f-a092eb4f21b5",
-     "nous": false
-    },
-    {
-     "place": 3,
-     "equipe": "GCO BIHOREL 3",
-     "points": 0,
-     "joue": 0,
-     "gagne": 0,
-     "nul": 0,
-     "perdu": 0,
-     "bp": 0,
-     "bc": 0,
-     "diff": 0,
+     "bp": 15,
+     "bc": 63,
+     "diff": -48,
      "logo": "2021-07-12-0391a4cd-f5f8-4e97-83c6-5df417264f8a",
-     "nous": false
-    },
-    {
-     "place": 4,
-     "equipe": "DEVILLE MAROMME HB 1",
-     "points": 0,
-     "joue": 0,
-     "gagne": 0,
-     "nul": 0,
-     "perdu": 0,
-     "bp": 0,
-     "bc": 0,
-     "diff": 0,
-     "logo": "2024-07-08-5c1e1e14-d7a1-4309-ac17-e5f0061d8a51",
      "nous": false
     }
    ]
@@ -224,7 +224,7 @@
    "coupe": false,
    "phase": "-15 MASCULINS CHAMPIONNAT 76 - PHASE 1 - BRASSAGE",
    "poule": "POULE 6",
-   "majFFHB": "2026-11-13 12:19:26.000",
+   "majFFHB": "2026-11-14 12:41:04.000",
    "url": "https://www.ffhandball.fr/competitions/saison-2026-2027-22/departemental/15-masculins-championnat-76-32964/equipe-2217046/",
    "rang": 1,
    "classement": [
@@ -1344,7 +1344,10 @@
    "dom": false,
    "adv": "GCO BIHOREL 3",
    "advLogo": "2021-07-12-0391a4cd-f5f8-4e97-83c6-5df417264f8a",
-   "score": null,
+   "score": [
+    39,
+    3
+   ],
    "forfait": null
   },
   {
