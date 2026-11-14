@@ -5,8 +5,8 @@
   "club": "A.S.C. BONSECOURS",
   "clubLogo": "2024-08-21-58a11b0c-1d13-4285-a9f6-899cae5a14e2",
   "equipes": 16,
-  "matchs": 93,
-  "majSite": "2026-11-13T19:52:41.176Z"
+  "matchs": 91,
+  "majSite": "2026-11-14T10:40:42.665Z"
  },
  "equipes": [
   {
@@ -767,7 +767,7 @@
    "coupe": false,
    "phase": "-17 MASCULINS CHAMPIONNAT 76 - PHASE 1 - BRASSAGE",
    "poule": "POULE UNIQUE",
-   "majFFHB": "2026-11-13 12:30:58.000",
+   "majFFHB": "2026-11-14 03:36:30.000",
    "url": "https://www.ffhandball.fr/competitions/saison-2026-2027-22/departemental/17-masculins-championnat-76-32963/equipe-2217122/",
    "rang": 5,
    "classement": [
@@ -1623,20 +1623,6 @@
    "forfait": null
   },
   {
-   "id": "2757208",
-   "equipe": "2175424",
-   "journee": 1,
-   "date": null,
-   "dom": false,
-   "adv": "MONTVILLE HB (FG)",
-   "advLogo": "2023-02-26-3f9113b4-9f9d-44b4-9063-e8ec9d1b2716",
-   "score": null,
-   "forfait": {
-    "perdant": "adv",
-    "code": "FO"
-   }
-  },
-  {
    "id": "2757141",
    "equipe": "2217046",
    "journee": 3,
@@ -1666,17 +1652,6 @@
    "dom": true,
    "adv": "CJ DOUDEVILLE",
    "advLogo": "2023-09-12-ce440a5e-4a0a-4983-a042-4681b1dd89fa",
-   "score": null,
-   "forfait": null
-  },
-  {
-   "id": "2757236",
-   "equipe": "2175424",
-   "journee": 8,
-   "date": null,
-   "dom": true,
-   "adv": "MONTVILLE HB (FG)",
-   "advLogo": "2023-02-26-3f9113b4-9f9d-44b4-9063-e8ec9d1b2716",
    "score": null,
    "forfait": null
   },
