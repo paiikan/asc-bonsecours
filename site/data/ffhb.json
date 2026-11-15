@@ -6,7 +6,7 @@
   "clubLogo": "2024-08-21-58a11b0c-1d13-4285-a9f6-899cae5a14e2",
   "equipes": 16,
   "matchs": 91,
-  "majSite": "2026-11-15T06:49:46.636Z"
+  "majSite": "2026-11-15T16:27:48.448Z"
  },
  "equipes": [
   {
@@ -137,7 +137,7 @@
    "coupe": false,
    "phase": "-11 MASCULINS CHAMPIONNAT 76 - PHASE 1 - BRASSAGE DEBUTANT",
    "poule": "POULE 7",
-   "majFFHB": "2026-11-14 23:44:23.000",
+   "majFFHB": "2026-11-15 11:56:00.000",
    "url": "https://www.ffhandball.fr/competitions/saison-2026-2027-22/departemental/11-masculins-championnat-76-33077/equipe-2216717/",
    "rang": 3,
    "classement": [
@@ -224,7 +224,7 @@
    "coupe": false,
    "phase": "-15 MASCULINS CHAMPIONNAT 76 - PHASE 1 - BRASSAGE",
    "poule": "POULE 6",
-   "majFFHB": "2026-11-15 01:28:59.000",
+   "majFFHB": "2026-11-15 12:22:19.000",
    "url": "https://www.ffhandball.fr/competitions/saison-2026-2027-22/departemental/15-masculins-championnat-76-32964/equipe-2217046/",
    "rang": 1,
    "classement": [
@@ -384,7 +384,7 @@
    "coupe": false,
    "phase": "+16 1ERE DIV MASCULINE 76",
    "poule": "POULE UNIQUE",
-   "majFFHB": "2026-11-15 01:08:44.000",
+   "majFFHB": "2026-11-15 07:18:03.000",
    "url": "https://www.ffhandball.fr/competitions/saison-2026-2027-22/departemental/16-1ere-div-masculine-76-32853/equipe-2168398/",
    "rang": 10,
    "classement": [
@@ -568,7 +568,7 @@
    "coupe": false,
    "phase": "+16ANS MASCULIN HONNEUR",
    "poule": "POULE C",
-   "majFFHB": "2026-11-15 04:32:58.000",
+   "majFFHB": "2026-11-15 12:36:21.000",
    "url": "https://www.ffhandball.fr/competitions/saison-2026-2027-22/regional/16ans-masculin-honneur-32322/equipe-2118211/",
    "rang": 1,
    "classement": [
@@ -616,6 +616,20 @@
     },
     {
      "place": 4,
+     "equipe": "AL BUQUET-ELBEUF HB",
+     "points": 13,
+     "joue": 6,
+     "gagne": 3,
+     "nul": 1,
+     "perdu": 2,
+     "bp": 184,
+     "bc": 163,
+     "diff": 21,
+     "logo": "2024-04-02-4adeef42-58c2-4f83-95d3-e59899b020f5",
+     "nous": false
+    },
+    {
+     "place": 5,
      "equipe": "BRIONNE HB",
      "points": 13,
      "joue": 6,
@@ -629,7 +643,7 @@
      "nous": false
     },
     {
-     "place": 5,
+     "place": 6,
      "equipe": "DEVILLE MAROMME HB 2",
      "points": 11,
      "joue": 5,
@@ -643,21 +657,21 @@
      "nous": false
     },
     {
-     "place": 6,
-     "equipe": "AL BUQUET-ELBEUF HB",
-     "points": 10,
-     "joue": 5,
+     "place": 7,
+     "equipe": "E LILLEBONNE GRAVENCHON GONFREVILLE 2",
+     "points": 11,
+     "joue": 6,
      "gagne": 2,
      "nul": 1,
-     "perdu": 2,
-     "bp": 149,
-     "bc": 144,
-     "diff": 5,
-     "logo": "2024-04-02-4adeef42-58c2-4f83-95d3-e59899b020f5",
+     "perdu": 3,
+     "bp": 169,
+     "bc": 173,
+     "diff": -4,
+     "logo": "",
      "nous": false
     },
     {
-     "place": 7,
+     "place": 8,
      "equipe": "HBC ROUMOIS 2",
      "points": 10,
      "joue": 6,
@@ -671,44 +685,30 @@
      "nous": false
     },
     {
-     "place": 8,
-     "equipe": "STADE VALERIQUAIS HB 3",
-     "points": 8,
-     "joue": 5,
-     "gagne": 1,
-     "nul": 1,
-     "perdu": 3,
-     "bp": 132,
-     "bc": 171,
-     "diff": -39,
-     "logo": "2024-06-18-34c61746-9d2e-4791-8d79-ffecb122cb48",
-     "nous": false
-    },
-    {
      "place": 9,
-     "equipe": "E LILLEBONNE GRAVENCHON GONFREVILLE 2",
-     "points": 8,
-     "joue": 5,
+     "equipe": "STADE VALERIQUAIS HB 3",
+     "points": 9,
+     "joue": 6,
      "gagne": 1,
      "nul": 1,
-     "perdu": 3,
-     "bp": 136,
-     "bc": 145,
-     "diff": -9,
-     "logo": "",
+     "perdu": 4,
+     "bp": 151,
+     "bc": 206,
+     "diff": -55,
+     "logo": "2024-06-18-34c61746-9d2e-4791-8d79-ffecb122cb48",
      "nous": false
     },
     {
      "place": 10,
      "equipe": "HBC GAILLON AUBEVOYE",
-     "points": 7,
-     "joue": 5,
+     "points": 8,
+     "joue": 6,
      "gagne": 1,
      "nul": 0,
-     "perdu": 4,
-     "bp": 147,
-     "bc": 189,
-     "diff": -42,
+     "perdu": 5,
+     "bp": 175,
+     "bc": 222,
+     "diff": -47,
      "logo": "2017-09-02-a6cbc6e9-e4e9-4221-a471-9f7f1fa94ad4",
      "nous": false
     },
@@ -767,7 +767,7 @@
    "coupe": false,
    "phase": "-17 MASCULINS CHAMPIONNAT 76 - PHASE 1 - BRASSAGE",
    "poule": "POULE UNIQUE",
-   "majFFHB": "2026-11-15 00:02:03.000",
+   "majFFHB": "2026-11-15 06:58:13.000",
    "url": "https://www.ffhandball.fr/competitions/saison-2026-2027-22/departemental/17-masculins-championnat-76-32963/equipe-2217122/",
    "rang": 6,
    "classement": [
