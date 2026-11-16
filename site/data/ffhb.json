@@ -6,7 +6,7 @@
   "clubLogo": "2024-08-21-58a11b0c-1d13-4285-a9f6-899cae5a14e2",
   "equipes": 16,
   "matchs": 91,
-  "majSite": "2026-11-16T06:48:57.402Z"
+  "majSite": "2026-11-16T19:42:14.479Z"
  },
  "equipes": [
   {
@@ -137,7 +137,7 @@
    "coupe": false,
    "phase": "-11 MASCULINS CHAMPIONNAT 76 - PHASE 1 - BRASSAGE DEBUTANT",
    "poule": "POULE 7",
-   "majFFHB": "2026-11-15 19:11:02.000",
+   "majFFHB": "2026-11-16 15:44:00.000",
    "url": "https://www.ffhandball.fr/competitions/saison-2026-2027-22/departemental/11-masculins-championnat-76-33077/equipe-2216717/",
    "rang": 3,
    "classement": [
@@ -224,7 +224,7 @@
    "coupe": false,
    "phase": "-15 MASCULINS CHAMPIONNAT 76 - PHASE 1 - BRASSAGE",
    "poule": "POULE 6",
-   "majFFHB": "2026-11-15 18:36:34.000",
+   "majFFHB": "2026-11-16 13:41:20.000",
    "url": "https://www.ffhandball.fr/competitions/saison-2026-2027-22/departemental/15-masculins-championnat-76-32964/equipe-2217046/",
    "rang": 1,
    "classement": [
@@ -384,7 +384,7 @@
    "coupe": false,
    "phase": "+16 1ERE DIV MASCULINE 76",
    "poule": "POULE UNIQUE",
-   "majFFHB": "2026-11-15 07:18:03.000",
+   "majFFHB": "2026-11-16 13:05:22.000",
    "url": "https://www.ffhandball.fr/competitions/saison-2026-2027-22/departemental/16-1ere-div-masculine-76-32853/equipe-2168398/",
    "rang": 10,
    "classement": [
@@ -568,12 +568,26 @@
    "coupe": false,
    "phase": "+16ANS MASCULIN HONNEUR",
    "poule": "POULE C",
-   "majFFHB": "2026-11-15 18:35:43.000",
+   "majFFHB": "2026-11-16 15:08:42.000",
    "url": "https://www.ffhandball.fr/competitions/saison-2026-2027-22/regional/16ans-masculin-honneur-32322/equipe-2118211/",
-   "rang": 1,
+   "rang": 2,
    "classement": [
     {
      "place": 1,
+     "equipe": "E VAL DE REUIL LOUVIERS HB 2",
+     "points": 18,
+     "joue": 6,
+     "gagne": 6,
+     "nul": 0,
+     "perdu": 0,
+     "bp": 188,
+     "bc": 141,
+     "diff": 47,
+     "logo": "2019-09-06-6d85e8a7-5f5b-4211-b8b2-6d0527464158",
+     "nous": false
+    },
+    {
+     "place": 2,
      "equipe": "A.S.C. BONSECOURS",
      "points": 16,
      "joue": 6,
@@ -587,7 +601,7 @@
      "nous": true
     },
     {
-     "place": 2,
+     "place": 3,
      "equipe": "CA LISIEUX HB",
      "points": 16,
      "joue": 6,
@@ -598,20 +612,6 @@
      "bc": 182,
      "diff": 31,
      "logo": "2022-06-10-a9ce1cf2-665f-4ad9-a23f-6a88bcd67195",
-     "nous": false
-    },
-    {
-     "place": 3,
-     "equipe": "E VAL DE REUIL LOUVIERS HB 2",
-     "points": 15,
-     "joue": 5,
-     "gagne": 5,
-     "nul": 0,
-     "perdu": 0,
-     "bp": 160,
-     "bc": 121,
-     "diff": 39,
-     "logo": "2019-09-06-6d85e8a7-5f5b-4211-b8b2-6d0527464158",
      "nous": false
     },
     {
@@ -715,14 +715,14 @@
     {
      "place": 11,
      "equipe": "A MALAUNAY/LE HOULME HB",
-     "points": 7,
-     "joue": 5,
+     "points": 8,
+     "joue": 6,
      "gagne": 1,
      "nul": 0,
-     "perdu": 4,
-     "bp": 143,
-     "bc": 164,
-     "diff": -21,
+     "perdu": 5,
+     "bp": 163,
+     "bc": 192,
+     "diff": -29,
      "logo": "2025-01-06-013f856f-816b-49de-829c-366af741d914",
      "nous": false
     },
@@ -752,7 +752,7 @@
    "coupe": true,
    "phase": "CDF REG MAS (2° TOUR)",
    "poule": "2° TOUR",
-   "majFFHB": "2026-11-13 16:17:33.000",
+   "majFFHB": "2026-11-16 14:57:31.000",
    "url": "https://www.ffhandball.fr/competitions/saison-2026-2027-22/coupe-de-france/coupe-de-france-caisse-d-epargne-regionale-masculine-2026-2027-32662/equipe-2220592/",
    "rang": null,
    "classement": []
@@ -767,7 +767,7 @@
    "coupe": false,
    "phase": "-17 MASCULINS CHAMPIONNAT 76 - PHASE 1 - BRASSAGE",
    "poule": "POULE UNIQUE",
-   "majFFHB": "2026-11-15 17:31:59.000",
+   "majFFHB": "2026-11-16 06:58:07.000",
    "url": "https://www.ffhandball.fr/competitions/saison-2026-2027-22/departemental/17-masculins-championnat-76-32963/equipe-2217122/",
    "rang": 2,
    "classement": [
@@ -1418,6 +1418,17 @@
    "forfait": null
   },
   {
+   "id": "2757141",
+   "equipe": "2217046",
+   "journee": 3,
+   "date": "2026-11-21T15:00:00+01:00",
+   "dom": false,
+   "adv": "ES AUMALE 2",
+   "advLogo": "2024-08-06-5a0e50a5-357f-44d5-8b85-7e73fa0ce160",
+   "score": null,
+   "forfait": null
+  },
+  {
    "id": "2756499",
    "equipe": "2216791",
    "journee": 3,
@@ -1633,17 +1644,6 @@
    "date": "2027-04-03T19:00:00+02:00",
    "dom": true,
    "adv": "ES AUMALE 1",
-   "advLogo": "2024-08-06-5a0e50a5-357f-44d5-8b85-7e73fa0ce160",
-   "score": null,
-   "forfait": null
-  },
-  {
-   "id": "2757141",
-   "equipe": "2217046",
-   "journee": 3,
-   "date": null,
-   "dom": false,
-   "adv": "ES AUMALE 2",
    "advLogo": "2024-08-06-5a0e50a5-357f-44d5-8b85-7e73fa0ce160",
    "score": null,
    "forfait": null
