@@ -6,7 +6,7 @@
   "clubLogo": "2024-08-21-58a11b0c-1d13-4285-a9f6-899cae5a14e2",
   "equipes": 16,
   "matchs": 91,
-  "majSite": "2026-11-18T20:43:32.186Z"
+  "majSite": "2026-11-19T02:40:10.535Z"
  },
  "equipes": [
   {
@@ -224,7 +224,7 @@
    "coupe": false,
    "phase": "-15 MASCULINS CHAMPIONNAT 76 - PHASE 1 - BRASSAGE",
    "poule": "POULE 6",
-   "majFFHB": "2026-11-18 15:18:13.000",
+   "majFFHB": "2026-11-18 22:19:09.000",
    "url": "https://www.ffhandball.fr/competitions/saison-2026-2027-22/departemental/15-masculins-championnat-76-32964/equipe-2217046/",
    "rang": 1,
    "classement": [
@@ -244,6 +244,20 @@
     },
     {
      "place": 2,
+     "equipe": "AS GOURNAY PAYS DE BRAY HB 2",
+     "points": 4,
+     "joue": 2,
+     "gagne": 1,
+     "nul": 0,
+     "perdu": 1,
+     "bp": 59,
+     "bc": 56,
+     "diff": 3,
+     "logo": "2023-04-13-61d0fd9a-a190-47b1-a4eb-29b9b5d47bea",
+     "nous": false
+    },
+    {
+     "place": 3,
      "equipe": "MONTVILLE HB 2",
      "points": 1,
      "joue": 1,
@@ -257,30 +271,16 @@
      "nous": false
     },
     {
-     "place": 3,
-     "equipe": "AS GOURNAY PAYS DE BRAY HB 2",
+     "place": 4,
+     "equipe": "ES AUMALE 2",
      "points": 1,
      "joue": 1,
      "gagne": 0,
      "nul": 0,
      "perdu": 1,
-     "bp": 25,
-     "bc": 32,
-     "diff": -7,
-     "logo": "2023-04-13-61d0fd9a-a190-47b1-a4eb-29b9b5d47bea",
-     "nous": false
-    },
-    {
-     "place": 4,
-     "equipe": "ES AUMALE 2",
-     "points": 0,
-     "joue": 0,
-     "gagne": 0,
-     "nul": 0,
-     "perdu": 0,
-     "bp": 0,
-     "bc": 0,
-     "diff": 0,
+     "bp": 24,
+     "bc": 34,
+     "diff": -10,
      "logo": "2024-08-06-5a0e50a5-357f-44d5-8b85-7e73fa0ce160",
      "nous": false
     }
@@ -752,7 +752,7 @@
    "coupe": true,
    "phase": "CDF REG MAS (2° TOUR)",
    "poule": "2° TOUR",
-   "majFFHB": "2026-11-18 15:57:31.000",
+   "majFFHB": "2026-11-18 20:47:30.000",
    "url": "https://www.ffhandball.fr/competitions/saison-2026-2027-22/coupe-de-france/coupe-de-france-caisse-d-epargne-regionale-masculine-2026-2027-32662/equipe-2220592/",
    "rang": null,
    "classement": []
@@ -767,9 +767,9 @@
    "coupe": false,
    "phase": "-17 MASCULINS CHAMPIONNAT 76 - PHASE 1 - BRASSAGE",
    "poule": "POULE UNIQUE",
-   "majFFHB": "2026-11-17 14:32:30.000",
+   "majFFHB": "2026-11-19 00:48:48.000",
    "url": "https://www.ffhandball.fr/competitions/saison-2026-2027-22/departemental/17-masculins-championnat-76-32963/equipe-2217122/",
-   "rang": 2,
+   "rang": 3,
    "classement": [
     {
      "place": 1,
@@ -787,6 +787,20 @@
     },
     {
      "place": 2,
+     "equipe": "DEVILLE MAROMME HB 2",
+     "points": 4,
+     "joue": 2,
+     "gagne": 1,
+     "nul": 0,
+     "perdu": 1,
+     "bp": 48,
+     "bc": 49,
+     "diff": -1,
+     "logo": "2024-07-08-5c1e1e14-d7a1-4309-ac17-e5f0061d8a51",
+     "nous": false
+    },
+    {
+     "place": 3,
      "equipe": "ASC BONSECOURS",
      "points": 3,
      "joue": 1,
@@ -800,7 +814,21 @@
      "nous": true
     },
     {
-     "place": 3,
+     "place": 4,
+     "equipe": "CJ DOUDEVILLE",
+     "points": 3,
+     "joue": 2,
+     "gagne": 0,
+     "nul": 1,
+     "perdu": 1,
+     "bp": 50,
+     "bc": 56,
+     "diff": -6,
+     "logo": "2023-09-12-ce440a5e-4a0a-4983-a042-4681b1dd89fa",
+     "nous": false
+    },
+    {
+     "place": 5,
      "equipe": "E MONTIVILLIERS/GONFREVILLE 3",
      "points": 2,
      "joue": 1,
@@ -814,21 +842,7 @@
      "nous": false
     },
     {
-     "place": 4,
-     "equipe": "CJ DOUDEVILLE",
-     "points": 2,
-     "joue": 1,
-     "gagne": 0,
-     "nul": 1,
-     "perdu": 0,
-     "bp": 33,
-     "bc": 33,
-     "diff": 0,
-     "logo": "2023-09-12-ce440a5e-4a0a-4983-a042-4681b1dd89fa",
-     "nous": false
-    },
-    {
-     "place": 5,
+     "place": 6,
      "equipe": "ST LEONARD HB 2",
      "points": 1,
      "joue": 1,
@@ -839,20 +853,6 @@
      "bc": 29,
      "diff": -6,
      "logo": "2026-07-24-a3a143d5-00f5-46d0-aa88-769c74dc213f",
-     "nous": false
-    },
-    {
-     "place": 6,
-     "equipe": "DEVILLE MAROMME HB 2",
-     "points": 1,
-     "joue": 1,
-     "gagne": 0,
-     "nul": 0,
-     "perdu": 1,
-     "bp": 25,
-     "bc": 32,
-     "diff": -7,
-     "logo": "2024-07-08-5c1e1e14-d7a1-4309-ac17-e5f0061d8a51",
      "nous": false
     },
     {
