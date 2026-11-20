@@ -6,7 +6,7 @@
   "clubLogo": "2024-08-21-58a11b0c-1d13-4285-a9f6-899cae5a14e2",
   "equipes": 16,
   "matchs": 91,
-  "majSite": "2026-11-20T11:55:07.761Z"
+  "majSite": "2026-11-20T20:33:00.538Z"
  },
  "equipes": [
   {
@@ -137,12 +137,26 @@
    "coupe": false,
    "phase": "-11 MASCULINS CHAMPIONNAT 76 - PHASE 1 - BRASSAGE DEBUTANT",
    "poule": "POULE 7",
-   "majFFHB": "2026-11-20 11:03:17.000",
+   "majFFHB": "2026-11-20 15:23:42.000",
    "url": "https://www.ffhandball.fr/competitions/saison-2026-2027-22/departemental/11-masculins-championnat-76-33077/equipe-2216717/",
-   "rang": 3,
+   "rang": 1,
    "classement": [
     {
      "place": 1,
+     "equipe": "ASC BONSECOURS",
+     "points": 6,
+     "joue": 2,
+     "gagne": 2,
+     "nul": 0,
+     "perdu": 0,
+     "bp": 67,
+     "bc": 10,
+     "diff": 57,
+     "logo": "2024-08-21-58a11b0c-1d13-4285-a9f6-899cae5a14e2",
+     "nous": true
+    },
+    {
+     "place": 2,
      "equipe": "HBC BELBEUF PLATEAU EST",
      "points": 4,
      "joue": 2,
@@ -156,7 +170,7 @@
      "nous": false
     },
     {
-     "place": 2,
+     "place": 3,
      "equipe": "DEVILLE MAROMME HB 1",
      "points": 4,
      "joue": 2,
@@ -170,27 +184,13 @@
      "nous": false
     },
     {
-     "place": 3,
-     "equipe": "ASC BONSECOURS",
-     "points": 3,
-     "joue": 1,
-     "gagne": 1,
-     "nul": 0,
-     "perdu": 0,
-     "bp": 28,
-     "bc": 7,
-     "diff": 21,
-     "logo": "2024-08-21-58a11b0c-1d13-4285-a9f6-899cae5a14e2",
-     "nous": true
-    },
-    {
      "place": 4,
      "equipe": "GCO BIHOREL 3",
-     "points": 1,
-     "joue": 1,
+     "points": 2,
+     "joue": 2,
      "gagne": 0,
      "nul": 0,
-     "perdu": 1,
+     "perdu": 2,
      "bp": 15,
      "bc": 63,
      "diff": -48,
@@ -311,12 +311,26 @@
    "coupe": false,
    "phase": "-13 MASCULINS CHAMPIONNAT 76 - PHASE 1 - BRASSAGE CONFIRME",
    "poule": "POULE 3",
-   "majFFHB": "2026-11-16 18:39:13.000",
+   "majFFHB": "2026-11-20 15:23:44.000",
    "url": "https://www.ffhandball.fr/competitions/saison-2026-2027-22/departemental/13-masculins-championnat-76-32965/equipe-2216791/",
-   "rang": 1,
+   "rang": 2,
    "classement": [
     {
      "place": 1,
+     "equipe": "GCO BIHOREL 2",
+     "points": 5,
+     "joue": 2,
+     "gagne": 1,
+     "nul": 1,
+     "perdu": 0,
+     "bp": 48,
+     "bc": 44,
+     "diff": 4,
+     "logo": "2021-07-12-0391a4cd-f5f8-4e97-83c6-5df417264f8a",
+     "nous": false
+    },
+    {
+     "place": 2,
      "equipe": "E BONSECOURS/BELBEUF",
      "points": 2,
      "joue": 1,
@@ -330,30 +344,16 @@
      "nous": true
     },
     {
-     "place": 2,
-     "equipe": "GCO BIHOREL 2",
-     "points": 2,
-     "joue": 1,
-     "gagne": 0,
-     "nul": 1,
-     "perdu": 0,
-     "bp": 23,
-     "bc": 23,
-     "diff": 0,
-     "logo": "2021-07-12-0391a4cd-f5f8-4e97-83c6-5df417264f8a",
-     "nous": false
-    },
-    {
      "place": 3,
      "equipe": "HBC AUFFAY-TOTES 1",
-     "points": 0,
-     "joue": 0,
+     "points": 1,
+     "joue": 1,
      "gagne": 0,
      "nul": 0,
-     "perdu": 0,
-     "bp": 0,
-     "bc": 0,
-     "diff": 0,
+     "perdu": 1,
+     "bp": 21,
+     "bc": 25,
+     "diff": -4,
      "logo": "2018-06-22-3cf684b9-ee10-45b8-97eb-c7ed56c13566",
      "nous": false
     }
@@ -384,12 +384,26 @@
    "coupe": false,
    "phase": "+16 1ERE DIV MASCULINE 76",
    "poule": "POULE UNIQUE",
-   "majFFHB": "2026-11-18 14:39:18.000",
+   "majFFHB": "2026-11-20 15:22:13.000",
    "url": "https://www.ffhandball.fr/competitions/saison-2026-2027-22/departemental/16-1ere-div-masculine-76-32853/equipe-2168398/",
    "rang": 10,
    "classement": [
     {
      "place": 1,
+     "equipe": "NEUFCHATEL HB 2",
+     "points": 18,
+     "joue": 6,
+     "gagne": 6,
+     "nul": 0,
+     "perdu": 0,
+     "bp": 236,
+     "bc": 179,
+     "diff": 57,
+     "logo": "2026-06-22-36842938-700d-46fb-af77-aaf94ce767c4",
+     "nous": false
+    },
+    {
+     "place": 2,
      "equipe": "MONTIVILLIERS HB 2",
      "points": 16,
      "joue": 6,
@@ -403,7 +417,7 @@
      "nous": false
     },
     {
-     "place": 2,
+     "place": 3,
      "equipe": "STADE SOTTEVILLAIS CC 2",
      "points": 16,
      "joue": 6,
@@ -414,20 +428,6 @@
      "bc": 162,
      "diff": 37,
      "logo": "2024-09-09-ae80bd85-d169-494c-b241-4fa2c62a4f8c",
-     "nous": false
-    },
-    {
-     "place": 3,
-     "equipe": "NEUFCHATEL HB 2",
-     "points": 15,
-     "joue": 5,
-     "gagne": 5,
-     "nul": 0,
-     "perdu": 0,
-     "bp": 205,
-     "bc": 151,
-     "diff": 54,
-     "logo": "2026-06-22-36842938-700d-46fb-af77-aaf94ce767c4",
      "nous": false
     },
     {
@@ -517,14 +517,14 @@
     {
      "place": 10,
      "equipe": "ASC BONSECOURS 2",
-     "points": 9,
-     "joue": 5,
+     "points": 10,
+     "joue": 6,
      "gagne": 2,
      "nul": 0,
-     "perdu": 3,
-     "bp": 139,
-     "bc": 139,
-     "diff": 0,
+     "perdu": 4,
+     "bp": 167,
+     "bc": 170,
+     "diff": -3,
      "logo": "2024-08-21-58a11b0c-1d13-4285-a9f6-899cae5a14e2",
      "nous": true
     },
@@ -568,7 +568,7 @@
    "coupe": false,
    "phase": "+16ANS MASCULIN HONNEUR",
    "poule": "POULE C",
-   "majFFHB": "2026-11-19 18:37:31.000",
+   "majFFHB": "2026-11-20 15:35:29.000",
    "url": "https://www.ffhandball.fr/competitions/saison-2026-2027-22/regional/16ans-masculin-honneur-32322/equipe-2118211/",
    "rang": 2,
    "classement": [
@@ -752,7 +752,7 @@
    "coupe": true,
    "phase": "CDF REG MAS (2° TOUR)",
    "poule": "2° TOUR",
-   "majFFHB": "2026-11-20 11:37:31.000",
+   "majFFHB": "2026-11-20 15:12:30.000",
    "url": "https://www.ffhandball.fr/competitions/saison-2026-2027-22/coupe-de-france/coupe-de-france-caisse-d-epargne-regionale-masculine-2026-2027-32662/equipe-2220592/",
    "rang": null,
    "classement": []
