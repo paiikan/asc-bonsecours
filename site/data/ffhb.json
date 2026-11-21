@@ -6,7 +6,7 @@
   "clubLogo": "2024-08-21-58a11b0c-1d13-4285-a9f6-899cae5a14e2",
   "equipes": 16,
   "matchs": 91,
-  "majSite": "2026-11-21T11:26:05.747Z"
+  "majSite": "2026-11-21T19:30:07.650Z"
  },
  "equipes": [
   {
@@ -137,12 +137,26 @@
    "coupe": false,
    "phase": "-11 MASCULINS CHAMPIONNAT 76 - PHASE 1 - BRASSAGE DEBUTANT",
    "poule": "POULE 7",
-   "majFFHB": "2026-11-20 15:23:42.000",
+   "majFFHB": "2026-11-21 17:10:10.000",
    "url": "https://www.ffhandball.fr/competitions/saison-2026-2027-22/departemental/11-masculins-championnat-76-33077/equipe-2216717/",
-   "rang": 1,
+   "rang": 2,
    "classement": [
     {
      "place": 1,
+     "equipe": "HBC BELBEUF PLATEAU EST",
+     "points": 7,
+     "joue": 3,
+     "gagne": 2,
+     "nul": 0,
+     "perdu": 1,
+     "bp": 55,
+     "bc": 45,
+     "diff": 10,
+     "logo": "2024-06-08-f45b7068-7fc4-4a25-845f-a092eb4f21b5",
+     "nous": false
+    },
+    {
+     "place": 2,
      "equipe": "ASC BONSECOURS",
      "points": 6,
      "joue": 2,
@@ -154,20 +168,6 @@
      "diff": 57,
      "logo": "2024-08-21-58a11b0c-1d13-4285-a9f6-899cae5a14e2",
      "nous": true
-    },
-    {
-     "place": 2,
-     "equipe": "HBC BELBEUF PLATEAU EST",
-     "points": 4,
-     "joue": 2,
-     "gagne": 1,
-     "nul": 0,
-     "perdu": 1,
-     "bp": 29,
-     "bc": 39,
-     "diff": -10,
-     "logo": "2024-06-08-f45b7068-7fc4-4a25-845f-a092eb4f21b5",
-     "nous": false
     },
     {
      "place": 3,
@@ -186,14 +186,14 @@
     {
      "place": 4,
      "equipe": "GCO BIHOREL 3",
-     "points": 2,
-     "joue": 2,
+     "points": 3,
+     "joue": 3,
      "gagne": 0,
      "nul": 0,
-     "perdu": 2,
-     "bp": 15,
-     "bc": 63,
-     "diff": -48,
+     "perdu": 3,
+     "bp": 21,
+     "bc": 89,
+     "diff": -68,
      "logo": "2021-07-12-0391a4cd-f5f8-4e97-83c6-5df417264f8a",
      "nous": false
     }
@@ -224,63 +224,63 @@
    "coupe": false,
    "phase": "-15 MASCULINS CHAMPIONNAT 76 - PHASE 1 - BRASSAGE",
    "poule": "POULE 6",
-   "majFFHB": "2026-11-19 13:33:20.000",
+   "majFFHB": "2026-11-21 17:35:47.000",
    "url": "https://www.ffhandball.fr/competitions/saison-2026-2027-22/departemental/15-masculins-championnat-76-32964/equipe-2217046/",
    "rang": 1,
    "classement": [
     {
      "place": 1,
      "equipe": "E BONSECOURS/BELBEUF",
-     "points": 6,
-     "joue": 2,
-     "gagne": 2,
+     "points": 9,
+     "joue": 3,
+     "gagne": 3,
      "nul": 0,
      "perdu": 0,
-     "bp": 61,
-     "bc": 49,
-     "diff": 12,
+     "bp": 95,
+     "bc": 78,
+     "diff": 17,
      "logo": "",
      "nous": true
     },
     {
      "place": 2,
      "equipe": "AS GOURNAY PAYS DE BRAY HB 2",
-     "points": 4,
-     "joue": 2,
+     "points": 5,
+     "joue": 3,
      "gagne": 1,
      "nul": 0,
-     "perdu": 1,
-     "bp": 59,
-     "bc": 56,
-     "diff": 3,
+     "perdu": 2,
+     "bp": 80,
+     "bc": 86,
+     "diff": -6,
      "logo": "2023-04-13-61d0fd9a-a190-47b1-a4eb-29b9b5d47bea",
      "nous": false
     },
     {
      "place": 3,
      "equipe": "MONTVILLE HB 2",
-     "points": 1,
-     "joue": 1,
-     "gagne": 0,
+     "points": 4,
+     "joue": 2,
+     "gagne": 1,
      "nul": 0,
      "perdu": 1,
-     "bp": 24,
-     "bc": 29,
-     "diff": -5,
+     "bp": 54,
+     "bc": 50,
+     "diff": 4,
      "logo": "2023-02-26-3f9113b4-9f9d-44b4-9063-e8ec9d1b2716",
      "nous": false
     },
     {
      "place": 4,
      "equipe": "ES AUMALE 2",
-     "points": 1,
-     "joue": 1,
+     "points": 2,
+     "joue": 2,
      "gagne": 0,
      "nul": 0,
-     "perdu": 1,
-     "bp": 24,
-     "bc": 34,
-     "diff": -10,
+     "perdu": 2,
+     "bp": 53,
+     "bc": 68,
+     "diff": -15,
      "logo": "2024-08-06-5a0e50a5-357f-44d5-8b85-7e73fa0ce160",
      "nous": false
     }
@@ -311,7 +311,7 @@
    "coupe": false,
    "phase": "-13 MASCULINS CHAMPIONNAT 76 - PHASE 1 - BRASSAGE CONFIRME",
    "poule": "POULE 3",
-   "majFFHB": "2026-11-20 15:23:44.000",
+   "majFFHB": "2026-11-21 17:26:53.000",
    "url": "https://www.ffhandball.fr/competitions/saison-2026-2027-22/departemental/13-masculins-championnat-76-32965/equipe-2216791/",
    "rang": 2,
    "classement": [
@@ -752,7 +752,7 @@
    "coupe": true,
    "phase": "CDF REG MAS (2° TOUR)",
    "poule": "2° TOUR",
-   "majFFHB": "2026-11-21 07:02:47.000",
+   "majFFHB": "2026-11-21 14:52:30.000",
    "url": "https://www.ffhandball.fr/competitions/saison-2026-2027-22/coupe-de-france/coupe-de-france-caisse-d-epargne-regionale-masculine-2026-2027-32662/equipe-2220592/",
    "rang": null,
    "classement": []
@@ -767,9 +767,9 @@
    "coupe": false,
    "phase": "-17 MASCULINS CHAMPIONNAT 76 - PHASE 1 - BRASSAGE",
    "poule": "POULE UNIQUE",
-   "majFFHB": "2026-11-19 00:48:48.000",
+   "majFFHB": "2026-11-21 17:41:06.000",
    "url": "https://www.ffhandball.fr/competitions/saison-2026-2027-22/departemental/17-masculins-championnat-76-32963/equipe-2217122/",
-   "rang": 3,
+   "rang": 4,
    "classement": [
     {
      "place": 1,
@@ -787,6 +787,20 @@
     },
     {
      "place": 2,
+     "equipe": "E MONTIVILLIERS/GONFREVILLE 3",
+     "points": 4,
+     "joue": 2,
+     "gagne": 0,
+     "nul": 2,
+     "perdu": 0,
+     "bp": 71,
+     "bc": 71,
+     "diff": 0,
+     "logo": "",
+     "nous": false
+    },
+    {
+     "place": 3,
      "equipe": "DEVILLE MAROMME HB 2",
      "points": 4,
      "joue": 2,
@@ -800,7 +814,7 @@
      "nous": false
     },
     {
-     "place": 3,
+     "place": 4,
      "equipe": "ASC BONSECOURS",
      "points": 3,
      "joue": 1,
@@ -814,7 +828,21 @@
      "nous": true
     },
     {
-     "place": 4,
+     "place": 5,
+     "equipe": "ST LEONARD HB 2",
+     "points": 3,
+     "joue": 2,
+     "gagne": 0,
+     "nul": 1,
+     "perdu": 1,
+     "bp": 61,
+     "bc": 67,
+     "diff": -6,
+     "logo": "2026-07-24-a3a143d5-00f5-46d0-aa88-769c74dc213f",
+     "nous": false
+    },
+    {
+     "place": 6,
      "equipe": "CJ DOUDEVILLE",
      "points": 3,
      "joue": 2,
@@ -825,34 +853,6 @@
      "bc": 56,
      "diff": -6,
      "logo": "2023-09-12-ce440a5e-4a0a-4983-a042-4681b1dd89fa",
-     "nous": false
-    },
-    {
-     "place": 5,
-     "equipe": "E MONTIVILLIERS/GONFREVILLE 3",
-     "points": 2,
-     "joue": 1,
-     "gagne": 0,
-     "nul": 1,
-     "perdu": 0,
-     "bp": 33,
-     "bc": 33,
-     "diff": 0,
-     "logo": "",
-     "nous": false
-    },
-    {
-     "place": 6,
-     "equipe": "ST LEONARD HB 2",
-     "points": 1,
-     "joue": 1,
-     "gagne": 0,
-     "nul": 0,
-     "perdu": 1,
-     "bp": 23,
-     "bc": 29,
-     "diff": -6,
-     "logo": "2026-07-24-a3a143d5-00f5-46d0-aa88-769c74dc213f",
      "nous": false
     },
     {
@@ -1425,7 +1425,10 @@
    "dom": false,
    "adv": "ES AUMALE 2",
    "advLogo": "2024-08-06-5a0e50a5-357f-44d5-8b85-7e73fa0ce160",
-   "score": null,
+   "score": [
+    34,
+    29
+   ],
    "forfait": null
   },
   {
@@ -1447,7 +1450,10 @@
    "dom": false,
    "adv": "STADE SOTTEVILLAIS CC",
    "advLogo": "2024-09-09-ae80bd85-d169-494c-b241-4fa2c62a4f8c",
-   "score": null,
+   "score": [
+    34,
+    41
+   ],
    "forfait": null
   },
   {
