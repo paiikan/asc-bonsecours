@@ -6,7 +6,7 @@
   "clubLogo": "2024-08-21-58a11b0c-1d13-4285-a9f6-899cae5a14e2",
   "equipes": 16,
   "matchs": 91,
-  "majSite": "2026-11-21T19:30:07.650Z"
+  "majSite": "2026-11-22T01:26:26.335Z"
  },
  "equipes": [
   {
@@ -137,7 +137,7 @@
    "coupe": false,
    "phase": "-11 MASCULINS CHAMPIONNAT 76 - PHASE 1 - BRASSAGE DEBUTANT",
    "poule": "POULE 7",
-   "majFFHB": "2026-11-21 17:10:10.000",
+   "majFFHB": "2026-11-21 21:34:09.000",
    "url": "https://www.ffhandball.fr/competitions/saison-2026-2027-22/departemental/11-masculins-championnat-76-33077/equipe-2216717/",
    "rang": 2,
    "classement": [
@@ -224,7 +224,7 @@
    "coupe": false,
    "phase": "-15 MASCULINS CHAMPIONNAT 76 - PHASE 1 - BRASSAGE",
    "poule": "POULE 6",
-   "majFFHB": "2026-11-21 17:35:47.000",
+   "majFFHB": "2026-11-21 21:27:14.000",
    "url": "https://www.ffhandball.fr/competitions/saison-2026-2027-22/departemental/15-masculins-championnat-76-32964/equipe-2217046/",
    "rang": 1,
    "classement": [
@@ -311,7 +311,7 @@
    "coupe": false,
    "phase": "-13 MASCULINS CHAMPIONNAT 76 - PHASE 1 - BRASSAGE CONFIRME",
    "poule": "POULE 3",
-   "majFFHB": "2026-11-21 17:26:53.000",
+   "majFFHB": "2026-11-21 18:01:12.000",
    "url": "https://www.ffhandball.fr/competitions/saison-2026-2027-22/departemental/13-masculins-championnat-76-32965/equipe-2216791/",
    "rang": 2,
    "classement": [
@@ -752,7 +752,7 @@
    "coupe": true,
    "phase": "CDF REG MAS (2° TOUR)",
    "poule": "2° TOUR",
-   "majFFHB": "2026-11-21 14:52:30.000",
+   "majFFHB": "2026-11-22 01:18:08.000",
    "url": "https://www.ffhandball.fr/competitions/saison-2026-2027-22/coupe-de-france/coupe-de-france-caisse-d-epargne-regionale-masculine-2026-2027-32662/equipe-2220592/",
    "rang": null,
    "classement": []
@@ -767,21 +767,21 @@
    "coupe": false,
    "phase": "-17 MASCULINS CHAMPIONNAT 76 - PHASE 1 - BRASSAGE",
    "poule": "POULE UNIQUE",
-   "majFFHB": "2026-11-21 17:41:06.000",
+   "majFFHB": "2026-11-21 20:00:12.000",
    "url": "https://www.ffhandball.fr/competitions/saison-2026-2027-22/departemental/17-masculins-championnat-76-32963/equipe-2217122/",
-   "rang": 4,
+   "rang": 3,
    "classement": [
     {
      "place": 1,
      "equipe": "HBC AUFFAY-TOTES",
-     "points": 6,
-     "joue": 2,
-     "gagne": 2,
+     "points": 9,
+     "joue": 3,
+     "gagne": 3,
      "nul": 0,
      "perdu": 0,
-     "bp": 83,
-     "bc": 63,
-     "diff": 20,
+     "bp": 118,
+     "bc": 91,
+     "diff": 27,
      "logo": "2018-06-22-3cf684b9-ee10-45b8-97eb-c7ed56c13566",
      "nous": false
     },
@@ -801,6 +801,20 @@
     },
     {
      "place": 3,
+     "equipe": "ASC BONSECOURS",
+     "points": 4,
+     "joue": 2,
+     "gagne": 1,
+     "nul": 0,
+     "perdu": 1,
+     "bp": 57,
+     "bc": 58,
+     "diff": -1,
+     "logo": "2024-08-21-58a11b0c-1d13-4285-a9f6-899cae5a14e2",
+     "nous": true
+    },
+    {
+     "place": 4,
      "equipe": "DEVILLE MAROMME HB 2",
      "points": 4,
      "joue": 2,
@@ -812,20 +826,6 @@
      "diff": -1,
      "logo": "2024-07-08-5c1e1e14-d7a1-4309-ac17-e5f0061d8a51",
      "nous": false
-    },
-    {
-     "place": 4,
-     "equipe": "ASC BONSECOURS",
-     "points": 3,
-     "joue": 1,
-     "gagne": 1,
-     "nul": 0,
-     "perdu": 0,
-     "bp": 29,
-     "bc": 23,
-     "diff": 6,
-     "logo": "2024-08-21-58a11b0c-1d13-4285-a9f6-899cae5a14e2",
-     "nous": true
     },
     {
      "place": 5,
@@ -1464,7 +1464,10 @@
    "dom": false,
    "adv": "HBC AUFFAY-TOTES",
    "advLogo": "2018-06-22-3cf684b9-ee10-45b8-97eb-c7ed56c13566",
-   "score": null,
+   "score": [
+    28,
+    35
+   ],
    "forfait": null
   },
   {
