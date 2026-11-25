@@ -6,7 +6,7 @@
   "clubLogo": "2024-08-21-58a11b0c-1d13-4285-a9f6-899cae5a14e2",
   "equipes": 16,
   "matchs": 91,
-  "majSite": "2026-11-23T01:50:30.988Z"
+  "majSite": "2026-11-25T19:26:49.825Z"
  },
  "equipes": [
   {
@@ -1587,6 +1587,17 @@
    "forfait": null
   },
   {
+   "id": "2757221",
+   "equipe": "2175424",
+   "journee": 5,
+   "date": "2026-12-12T17:15:00+01:00",
+   "dom": false,
+   "adv": "DEVILLE MAROMME HB 2",
+   "advLogo": "2024-07-08-5c1e1e14-d7a1-4309-ac17-e5f0061d8a51",
+   "score": null,
+   "forfait": null
+  },
+  {
    "id": "2690754",
    "equipe": "2168398",
    "journee": 9,
@@ -1605,17 +1616,6 @@
    "dom": false,
    "adv": "A MALAUNAY/LE HOULME HB",
    "advLogo": "2025-01-06-013f856f-816b-49de-829c-366af741d914",
-   "score": null,
-   "forfait": null
-  },
-  {
-   "id": "2757221",
-   "equipe": "2175424",
-   "journee": 5,
-   "date": "2026-12-13T10:00:00+01:00",
-   "dom": false,
-   "adv": "DEVILLE MAROMME HB 2",
-   "advLogo": "2024-07-08-5c1e1e14-d7a1-4309-ac17-e5f0061d8a51",
    "score": null,
    "forfait": null
   },
